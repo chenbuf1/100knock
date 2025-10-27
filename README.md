@@ -68,3 +68,36 @@ no changes added to commit (use "git add" and/or "git commit -a")
 developブランチで追加したテキストです。
 
 ## 07. PR modify
+
+
+## 08. 過去のコミット履歴の確認と差分の確認
+```
+git log --oneline
+5b481ce Merge pull request #1 from chenbuf1/develop
+4b3929a 07: add new content for practices
+3503dee “06”
+0e516bc 05
+7d7d1c1 05: Add .gitignore file
+```
+git diff
+diff --git a/README.md b/README.md
+index 502a60c..8ba2e4b 100644
+--- a/README.md
++++ b/README.md
+@@ -68,3 +68,15 @@ no changes added to commit (use "git add" and/or "git commit -a")
+ developブランチで追加したテキストです。
+ 
+ ## 07. PR modify
++
++
++## 08. 過去のコミット履歴の確認と差分の確認
++```
++git log --oneline
++5b481ce Merge pull request #1 from chenbuf1/develop
++4b3929a 07: add new content for practices
++3503dee “06”
++0e516bc 05
++7d7d1c1 05: Add .gitignore file
++```
++git diff
+```
