@@ -27,3 +27,4 @@ origin  git@github.com:senkeifan/git-practice.git (push)
 ```
 
 ローカルで1行追加しました。
+ローカルで1行追加しました。(from github)
