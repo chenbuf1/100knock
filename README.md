@@ -39,3 +39,26 @@ git log --oneline
 a3bc295 “02”
 ac1b609 01
 ```
+
+
+## 05. .gitignoreの作成と確認
+```
+cat .gitignore
+node_modules/
+```
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")の結果：
+```
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
