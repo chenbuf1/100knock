@@ -66,3 +66,5 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 ## 06. ブランチ練習（developブランチ）
 developブランチで追加したテキストです。
+
+## 07. PR modify
