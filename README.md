@@ -25,3 +25,5 @@ Hi chenbuf1! You've successfully authenticated, but GitHub does not provide shel
 origin  git@github.com:senkeifan/git-practice.git (fetch)
 origin  git@github.com:senkeifan/git-practice.git (push)
 ```
+
+ローカルで1行追加しました。
