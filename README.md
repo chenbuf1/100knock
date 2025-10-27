@@ -11,3 +11,8 @@ git version 2.39.5 (Apple Git-154)
 ```
 ae58966 00
 ```
+
+# 02. GitHubアカウントの作成とSSHキー登録
+```
+Hi chenbuf1! You've successfully authenticated, but GitHub does not provide shell access.
+```
