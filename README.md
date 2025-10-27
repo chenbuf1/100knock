@@ -22,8 +22,8 @@ Hi chenbuf1! You've successfully authenticated, but GitHub does not provide shel
 
 実行結果：
 ```
-origin  git@github.com:senkeifan/git-practice.git (fetch)
-origin  git@github.com:senkeifan/git-practice.git (push)
+origin  git@github.com:chenbuf1/100knock.git (fetch)
+origin  git@github.com:chenbuf1/100knock.git (push)
 ```
 
 ローカルで1行追加しました。
