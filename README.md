@@ -16,3 +16,12 @@ ae58966 00
 ```
 Hi chenbuf1! You've successfully authenticated, but GitHub does not provide shell access.
 ```
+
+
+# 03. リモートリポジトリの連携
+
+実行結果：
+```
+origin  git@github.com:senkeifan/git-practice.git (fetch)
+origin  git@github.com:senkeifan/git-practice.git (push)
+```
