@@ -28,3 +28,14 @@ origin  git@github.com:senkeifan/git-practice.git (push)
 
 ローカルで1行追加しました。
 ローカルで1行追加しました。(from github)
+
+
+## 04. push/pullとコミット履歴
+```
+git log --oneline
+35f55ee 04.Edit from GitHub
+513c22c test for 04
+2c35710 “03”
+a3bc295 “02”
+ac1b609 01
+```
