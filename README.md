@@ -144,9 +144,10 @@ curl https://httpbin.org/get
   \"url\": \"https://httpbin.org/get\"
 }
 ```
-
+```
 curl コマンドはHTTP通信をテストするためのツールである。
 GET リクエストを送信すると、httpbin.org が受け取ったヘッダーや送信元IPなどをJSONで返す。
 User-Agent は使用したクライアント（ここではcurl）の情報を示す。
 origin は自分のグローバルIPアドレスを示す。
 url は実際にアクセスしたURLである。
+```
