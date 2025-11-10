@@ -123,3 +123,30 @@ Cache-Control: max-age=0
 Date: Mon, 10 Nov 2025 06:43:31 GMT
 Alt-Svc: h3=":443"; ma=93600
 ```
+## 12. curlでGETリクエストを送信
+
+実行コマンド：
+```bash
+curl https://httpbin.org/get
+```
+
+返ってきたレスポンス：
+```json
+{
+  \"args\": {},
+  \"headers\": {
+    \"Accept\": \"*/*\",
+    \"Host\": \"httpbin.org\",
+    \"User-Agent\": \"curl/8.7.1\",
+    \"X-Amzn-Trace-Id\": \"Root=1-6911bf1c-60be8cd603eeafcf329c67e0\"
+  },
+  \"origin\": \"103.5.140.141\",
+  \"url\": \"https://httpbin.org/get\"
+}
+```
+
+curl コマンドはHTTP通信をテストするためのツールである。
+GET リクエストを送信すると、httpbin.org が受け取ったヘッダーや送信元IPなどをJSONで返す。
+User-Agent は使用したクライアント（ここではcurl）の情報を示す。
+origin は自分のグローバルIPアドレスを示す。
+url は実際にアクセスしたURLである。
