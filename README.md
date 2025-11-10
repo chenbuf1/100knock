@@ -270,3 +270,13 @@ curl "https://httpbin.org/get?name=foo&age=20"
 | PATCH    | 指定リソースの一部を更新する。 | ユーザ名のみ変更など部分修正。
 | DELETE   | 指定リソースを削除する。 | 投稿やアカウント削除など。
 
+# 18. レスポンスのContent-Typeを調べる
+
+以下のように、curlやブラウザのデベロッパーツールを使ってContent-Typeを確認できる。
+
+| URL例 | 期待されるContent-Type |
+|--------|------------------------|
+| https://example.com | text/html |
+| https://httpbin.org/json | application/json |
+| https://httpbin.org/image/png | image/png |
+
