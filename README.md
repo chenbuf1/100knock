@@ -280,3 +280,10 @@ curl "https://httpbin.org/get?name=foo&age=20"
 | https://httpbin.org/json | application/json |
 | https://httpbin.org/image/png | image/png |
 
+## 19. レスポンスヘッダーとボディの違いを整理する
+
+HTTPレスポンスは「ヘッダー」と「ボディ」に分かれている。
+ヘッダーはステータスコードやサーバー、Content-Typeなどの情報を含み、通信に関するメタ情報を伝える。
+一方、ボディは実際のデータ（HTML、JSON、画像など）を含む部分である。
+たとえば、WebページのHTMLコードやAPIのJSONレスポンスはボディに含まれる。
+つまり、ヘッダーは“情報の情報”、ボディは“本体の内容”と言える。
