@@ -194,3 +194,17 @@ curl -X POST -H "Content-Type: application/json" -d '{"name":"test"}' https://ht
 - `User-Agent` は使用したクライアント（curl）の情報。
 - `url` はアクセスしたエンドポイントを示す。
 ```
+# 14. HTTPステータスコードを調べてまとめる
+
+よく使われるHTTPステータスコード：
+
+- 200 OK：リクエストが正常に処理された
+- 301 Moved Permanently：恒久的に移動
+- 302 Found：一時的に移動
+- 400 Bad Request：リクエストに誤り
+- 401 Unauthorized：認証が必要
+- 403 Forbidden：アクセス拒否
+- 404 Not Found：リソースが存在しない
+- 500 Internal Server Error：サーバ側のエラー
+- 503 Service Unavailable：サーバが利用不可
+
