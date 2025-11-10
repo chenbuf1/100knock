@@ -231,3 +231,30 @@ alt-svc: h3=":443"; ma=93600
 - HTTP/2 を使っていることがわかる。
 - alt-svc はHTTP/3用の設定情報。
 
+# 16. クエリパラメータ付きのリクエストを送る
+
+実行コマンド：
+```bash
+curl "https://httpbin.org/get?name=foo&age=20"
+```
+
+レスポンス：
+```json
+{
+  "args": {
+    "age": "20",
+    "name": "foo"
+  },
+  "headers": {
+    "Accept": "*/*",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.7.1",
+    "X-Amzn-Trace-Id": "Root=1-6912059c-259798906f893ddf4596df3b"
+  },
+  "origin": "124.209.82.250",
+  "url": "https://httpbin.org/get?name=foo&age=20"
+}
+```
+
+解説：
+- `args` フィールドに、クエリパラメータとして送った `name=foo` と `age=20` が反映されている。
