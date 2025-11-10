@@ -151,7 +151,7 @@ User-Agent は使用したクライアント（ここではcurl）の情報を�
 origin は自分のグローバルIPアドレスを示す。
 url は実際にアクセスしたURLである。
 ```
-## 13. curlコマンドでPOSTリクエストを送る
+# 13. curlコマンドでPOSTリクエストを送る
 
 実行コマンド：
 ```bash
@@ -187,9 +187,10 @@ curl -X POST -H "Content-Type: application/json" -d '{"name":"test"}' https://ht
 ```
 
 解説：
+```
 - `curl` コマンドで JSON データをPOST送信した。
 - サーバ（httpbin.org）は受け取ったデータを `json` フィールドとしてそのまま返している。
 - `Content-Type: application/json` は送信データの形式を示す。
 - `User-Agent` は使用したクライアント（curl）の情報。
 - `url` はアクセスしたエンドポイントを示す。
-
+```
