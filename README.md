@@ -114,6 +114,7 @@ HTTP（HyperText Transfer Protocol）は、Web上でクライアント（主に�
 
 ## 11. ヘッダー情報の確認
 
+```
 対象ページ: https://example.com
 主要なヘッダー情報:
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
@@ -121,3 +122,4 @@ Content-Type: text/html
 Cache-Control: max-age=0
 Date: Mon, 10 Nov 2025 06:43:31 GMT
 Alt-Svc: h3=":443"; ma=93600
+```
