@@ -111,3 +111,13 @@ index 502a60c..8ba2e4b 100644
 ```
 HTTP（HyperText Transfer Protocol）は、Web上でクライアント（主にブラウザ）とサーバ間のデータ通信を行うためのプロトコルである。要求（Request）と応答（Response）から成り、ステートレスな特徴を持つ。代表的なバージョンにはHTTP/1.1（永続的接続・ヘッダ圧縮なし）、HTTP/2（バイナリ化・多重通信・ヘッダ圧縮による高速化）、HTTP/3（UDPベースのQUIC利用による低遅延通信）がある。
 ```
+
+## 11. ヘッダー情報の確認
+
+対象ページ: https://example.com
+主要なヘッダー情報:
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Content-Type: text/html
+Cache-Control: max-age=0
+Date: Mon, 10 Nov 2025 06:43:31 GMT
+Alt-Svc: h3=":443"; ma=93600
