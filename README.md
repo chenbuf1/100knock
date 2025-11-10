@@ -280,7 +280,7 @@ curl "https://httpbin.org/get?name=foo&age=20"
 | https://httpbin.org/json | application/json |
 | https://httpbin.org/image/png | image/png |
 
-## 19. レスポンスヘッダーとボディの違いを整理する
+# 19. レスポンスヘッダーとボディの違いを整理する
 
 HTTPレスポンスは「ヘッダー」と「ボディ」に分かれている。
 ヘッダーはステータスコードやサーバー、Content-Typeなどの情報を含み、通信に関するメタ情報を伝える。
