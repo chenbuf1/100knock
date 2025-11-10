@@ -208,3 +208,26 @@ curl -X POST -H "Content-Type: application/json" -d '{"name":"test"}' https://ht
 - 500 Internal Server Error：サーバ側のエラー
 - 503 Service Unavailable：サーバが利用不可
 
+# 15. 任意のWebサイトに対してHEADリクエストを送る
+
+実行コマンド：
+```bash
+curl -I https://example.com
+```
+
+レスポンスヘッダー：
+```
+HTTP/2 200
+content-type: text/html
+etag: "bc2473a18e003bdb249eba5ce893033f:1760028122.592274"
+last-modified: Thu, 09 Oct 2025 16:42:02 GMT
+cache-control: max-age=86000
+date: Mon, 10 Nov 2025 15:22:45 GMT
+alt-svc: h3=":443"; ma=93600
+```
+
+気づいた点：
+- ステータスコード200は正常応答を意味する。
+- HTTP/2 を使っていることがわかる。
+- alt-svc はHTTP/3用の設定情報。
+
