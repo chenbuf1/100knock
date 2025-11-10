@@ -30,7 +30,7 @@ origin  git@github.com:chenbuf1/100knock.git (push)
 ローカルで1行追加しました。(from github)
 
 
-## 04. push/pullとコミット履歴
+# 04. push/pullとコミット履歴
 ```
 git log --oneline
 35f55ee 04.Edit from GitHub
@@ -41,7 +41,7 @@ ac1b609 01
 ```
 
 
-## 05. .gitignoreの作成と確認
+# 05. .gitignoreの作成と確認
 ```
 cat .gitignore
 node_modules/
@@ -64,13 +64,13 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 
-## 06. ブランチ練習（developブランチ）
+# 06. ブランチ練習（developブランチ）
 developブランチで追加したテキストです。
 
-## 07. PR modify
+# 07. PR modify
 
 
-## 08. 過去のコミット履歴の確認と差分の確認
+# 08. 過去のコミット履歴の確認と差分の確認
 ```
 git log --oneline
 5b481ce Merge pull request #1 from chenbuf1/develop
@@ -105,14 +105,14 @@ index 502a60c..8ba2e4b 100644
 
 ```
 
-## 10. HTTPとは何か調べてまとめる
+# 10. HTTPとは何か調べてまとめる
 
 まとめ：
 ```
 HTTP（HyperText Transfer Protocol）は、Web上でクライアント（主にブラウザ）とサーバ間のデータ通信を行うためのプロトコルである。要求（Request）と応答（Response）から成り、ステートレスな特徴を持つ。代表的なバージョンにはHTTP/1.1（永続的接続・ヘッダ圧縮なし）、HTTP/2（バイナリ化・多重通信・ヘッダ圧縮による高速化）、HTTP/3（UDPベースのQUIC利用による低遅延通信）がある。
 ```
 
-## 11. ヘッダー情報の確認
+# 11. ヘッダー情報の確認
 
 ```
 対象ページ: https://example.com
@@ -123,7 +123,7 @@ Cache-Control: max-age=0
 Date: Mon, 10 Nov 2025 06:43:31 GMT
 Alt-Svc: h3=":443"; ma=93600
 ```
-## 12. curlでGETリクエストを送信
+# 12. curlでGETリクエストを送信
 
 実行コマンド：
 ```bash
