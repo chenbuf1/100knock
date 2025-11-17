@@ -319,3 +319,6 @@ HTTPレスポンスは「ヘッダー」と「ボディ」に分かれている�
   </body>
 </html>
 ```
+以下は表示結果のスクリーンショットである：
+<img width="1886" height="1010" alt="21 screenshot" src="https://github.com/user-attachments/assets/5c95fda6-d47e-4d6d-9695-2a8a22e7651d" />
+
