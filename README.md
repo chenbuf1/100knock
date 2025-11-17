@@ -360,3 +360,16 @@ img {
 以下は表示結果のスクリーンショットである：
 
 <img width="866" height="1330" alt="3cdc681cde6820619d569f4abed2ab8d" src="https://github.com/user-attachments/assets/29d2ed89-2927-42bc-bb4c-70e9d7c2d497" />
+
+## 課題23：リンクと画像表示
+
+```html
+<h2>学校リンク</h2>
+<p>
+  詳しくは <a href="https://www.design.kyushu-u.ac.jp/" target="_blank">九州大学芸術工学部のサイト</a> をご覧ください。
+</p>
+
+<h2>画像表示</h2>
+<img src="https://www.design.kyushu-u.ac.jp/_cms_dir/wp-content/uploads/2025/11/a117bf10afbed54b93cb58d888dc5fe5-2048x1365.jpg"
+     alt="九州大学校内" width="200">
+```
