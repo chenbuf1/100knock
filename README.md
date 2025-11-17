@@ -377,3 +377,32 @@ img {
 <img width="1152" height="1622" alt="a7c49704e6f89ff22438c44721f7f815" src="https://github.com/user-attachments/assets/47c58fa3-94a5-45f0-be5e-524db9505784" />
 
 
+
+# 24. 入力フォームの作成
+
+```html
+<form action="#" method="post">
+  <label for="name">名前：</label><br>
+  <input type="text" id="name" name="name" placeholder="お名前を入力してください"><br><br>
+
+  <label for="email">メールアドレス：</label><br>
+  <input type="email" id="email" name="email" placeholder="example@example.com"><br><br>
+
+  <label for="message">メッセージ：</label><br>
+  <textarea id="message" name="message" rows="5" cols="40" placeholder="ご質問ください"></textarea><br><br>
+
+  <button type="submit">送信</button>
+</form>
+<form action="#" method="post">
+  <label for="name">名前：</label><br>
+  <input type="text" id="name" name="name" placeholder="お名前を入力してください"><br><br>
+
+  <label for="email">メールアドレス：</label><br>
+  <input type="email" id="email" name="email" placeholder="example@example.com"><br><br>
+
+  <label for="message">メッセージ：</label><br>
+  <textarea id="message" name="message" rows="5" cols="40" placeholder="ご質問ください"></textarea><br><br>
+
+  <button type="submit">送信</button>
+</form>
+```
