@@ -322,3 +322,38 @@ HTTPレスポンスは「ヘッダー」と「ボディ」に分かれている�
 以下は表示結果のスクリーンショットである：
 <img width="1886" height="1010" alt="21 screenshot" src="https://github.com/user-attachments/assets/5c95fda6-d47e-4d6d-9695-2a8a22e7651d" />
 
+# 22. CSSファイルによるページの装飾
+
+```css
+body {
+  background-color: #f4f4f4;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+  padding: 40px;
+}
+
+h1 {
+  color: #0066cc;
+  font-size: 28px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+img {
+  border-radius: 10px;
+  margin-top: 15px;
+  width: 200px;
+}
+```
