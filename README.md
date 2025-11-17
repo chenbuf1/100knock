@@ -357,3 +357,6 @@ img {
   width: 200px;
 }
 ```
+以下は表示結果のスクリーンショットである：
+
+<img width="866" height="1330" alt="3cdc681cde6820619d569f4abed2ab8d" src="https://github.com/user-attachments/assets/29d2ed89-2927-42bc-bb4c-70e9d7c2d497" />
