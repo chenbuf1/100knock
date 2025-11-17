@@ -393,16 +393,8 @@ img {
 
   <button type="submit">送信</button>
 </form>
-<form action="#" method="post">
-  <label for="name">名前：</label><br>
-  <input type="text" id="name" name="name" placeholder="お名前を入力してください"><br><br>
-
-  <label for="email">メールアドレス：</label><br>
-  <input type="email" id="email" name="email" placeholder="example@example.com"><br><br>
-
-  <label for="message">メッセージ：</label><br>
-  <textarea id="message" name="message" rows="5" cols="40" placeholder="ご質問ください"></textarea><br><br>
-
-  <button type="submit">送信</button>
-</form>
 ```
+以下は表示結果のスクリーンショットである：
+
+
+<img width="838" height="704" alt="a7dfbb238f59fee28fdace50632d07eb" src="https://github.com/user-attachments/assets/88cd350e-bb97-40c3-84b5-b8cbc92e34a7" />
