@@ -299,3 +299,23 @@ HTTPレスポンスは「ヘッダー」と「ボディ」に分かれている�
   </body>
 </html>
 ```
+# 21. 複数のHTML要素を用いて自己紹介ページの作成
+
+```html
+<html>
+  <head>
+    <title> 最小限のHTMLページ</title>
+  </head>
+  <body>
+    <h1>自己紹介</h1>
+    <img src="photo.jpg" alt="photo" width="100">
+    <p>私は音楽が好きです：</p>
+
+    <ul>
+     <li>ずっと真夜中でいいのに。</li>
+     <li>トゲナシトゲアリ</li>
+    </ul>
+    
+  </body>
+</html>
+```
