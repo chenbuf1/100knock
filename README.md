@@ -373,3 +373,7 @@ img {
 <img src="https://www.design.kyushu-u.ac.jp/_cms_dir/wp-content/uploads/2025/11/a117bf10afbed54b93cb58d888dc5fe5-2048x1365.jpg"
      alt="九州大学校内" width="200">
 ```
+以下は表示結果のスクリーンショットである：
+<img width="1152" height="1622" alt="a7c49704e6f89ff22438c44721f7f815" src="https://github.com/user-attachments/assets/47c58fa3-94a5-45f0-be5e-524db9505784" />
+
+
