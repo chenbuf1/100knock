@@ -398,3 +398,60 @@ img {
 
 
 <img width="838" height="704" alt="a7dfbb238f59fee28fdace50632d07eb" src="https://github.com/user-attachments/assets/88cd350e-bb97-40c3-84b5-b8cbc92e34a7" />
+
+## 課題25：テーブルによるデータ表示
+
+```html
+<table border="1">
+  <tr>
+    <th>時間</th>
+    <th>月曜日</th>
+    <th>火曜日</th>
+    <th>水曜日</th>
+    <th>木曜日</th>
+    <th>金曜日</th>
+  </tr>
+  <tr>
+    <td>1限</td>
+    <td>数学</td>
+    <td>英語</td>
+    <td>化学</td>
+    <td>国語</td>
+    <td>物理</td>
+  </tr>
+  <tr>
+    <td>2限</td>
+    <td>体育</td>
+    <td>数学</td>
+    <td>英語</td>
+    <td>歴史</td>
+    <td>情報</td>
+  </tr>
+</table>
+<table border="1">
+  <tr>
+    <th>時間</th>
+    <th>月曜日</th>
+    <th>火曜日</th>
+    <th>水曜日</th>
+    <th>木曜日</th>
+    <th>金曜日</th>
+  </tr>
+  <tr>
+    <td>1限</td>
+    <td>数学</td>
+    <td>英語</td>
+    <td>化学</td>
+    <td>国語</td>
+    <td>物理</td>
+  </tr>
+  <tr>
+    <td>2限</td>
+    <td>体育</td>
+    <td>数学</td>
+    <td>英語</td>
+    <td>歴史</td>
+    <td>情報</td>
+  </tr>
+</table>
+```
