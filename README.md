@@ -399,7 +399,7 @@ img {
 
 <img width="838" height="704" alt="a7dfbb238f59fee28fdace50632d07eb" src="https://github.com/user-attachments/assets/88cd350e-bb97-40c3-84b5-b8cbc92e34a7" />
 
-## 課題25：テーブルによるデータ表示
+# 25：テーブルによるデータ表示
 
 ```html
 <table border="1">
