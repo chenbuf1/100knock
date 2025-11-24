@@ -507,4 +507,7 @@ console.log("変数：", x);
 console.log("配列：", fruits);
 console.log("オブジェクト：", student);
 ```
+以下は表示結果のスクリーンショットである：
+<img width="1252" height="604" alt="6e4536ef590a074f5b1a2b652929076d" src="https://github.com/user-attachments/assets/fe96e7b7-2d3a-4612-9cad-50608c946916" />
+
 
