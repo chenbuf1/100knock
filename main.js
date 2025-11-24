@@ -84,3 +84,12 @@ button.addEventListener("click", () => {
 });
 
 
+// メールアドレス処理
+const emailInput = document.getElementById("emailInput");
+const submitEmail = document.getElementById("submitEmail");
+const emailDisplay = document.getElementById("emailDisplay");
+
+submitEmail.addEventListener("click", () => {
+  const email = emailInput.value;
+  emailDisplay.textContent = "入力されたメールアドレス：" + email;
+});
