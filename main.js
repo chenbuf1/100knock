@@ -95,7 +95,7 @@ submitEmail.addEventListener("click", () => {
   console.log("入力されたメールアドレス：" + email);
 });
 
-// 3. DOM操作 → <p> の内容を書き換え
+// DOM操作 → <p> の内容を書き換え
 const msg = document.getElementById("msg");
 const toggleBtn = document.getElementById("toggleBtn");
 
@@ -105,4 +105,14 @@ toggleBtn.addEventListener("click", () => {
   } else {
     msg.textContent = "Hello";
   }
+});
+
+
+// 38
+const list = document.getElementById("fruitList");
+
+fruits.forEach(fruit => {
+  const li = document.createElement("li");
+  li.textContent = fruit;
+  list.appendChild(li);
 });
