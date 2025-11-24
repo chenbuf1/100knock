@@ -122,10 +122,10 @@ fruits.forEach(fruit => {
 // 39
 const todos = []; // 空配列を用意
 const input = document.getElementById("todoInput");
-const button = document.getElementById("addBtn");
+const add = document.getElementById("addBtn");
 const list = document.getElementById("todoList");
 
-button.addEventListener("click", () => {
+add.addEventListener("click", () => {
   const value = input.value.trim(); // 空白除去
   if (value) {
     todos.push(value); // 配列に追加
