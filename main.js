@@ -92,4 +92,5 @@ const emailDisplay = document.getElementById("emailDisplay");
 submitEmail.addEventListener("click", () => {
   const email = emailInput.value;
   emailDisplay.textContent = "入力されたメールアドレス：" + email;
+  console.log("入力されたメールアドレス：" + email);
 });
