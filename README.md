@@ -535,3 +535,12 @@ console.log("オブジェクト：", student);
 
 
 
+
+# 34. 関数の定義
+コードである：
+<img width="748" height="370" alt="3c651a6094397edd78361f9f4f5c10d5" src="https://github.com/user-attachments/assets/5b382fe9-1d83-4e25-8f29-d2184ba2db38" />
+
+
+以下は表示結果のスクリーンショットである：
+<img width="418" height="58" alt="66eb0110be5209d05c94eaee034c4bf4" src="https://github.com/user-attachments/assets/4b03e4a1-0c3e-4dfa-bfcf-46dff8eb794e" />
+
