@@ -116,3 +116,31 @@ fruits.forEach(fruit => {
   li.textContent = fruit;
   list.appendChild(li);
 });
+
+
+
+// 39
+const todos = []; // 空配列を用意
+const input = document.getElementById("todoInput");
+const button = document.getElementById("addBtn");
+const list = document.getElementById("todoList");
+
+button.addEventListener("click", () => {
+  const value = input.value.trim(); // 空白除去
+  if (value) {
+    todos.push(value); // 配列に追加
+    input.value = "";  // 入力欄をクリア
+    renderList();      // 表示更新
+  }
+});
+
+function renderList() {
+  list.innerHTML = ""; // 一旦全削除
+  todos.forEach(todo => {
+    const li = document.createElement("li");
+    li.textContent = todo;
+    list.appendChild(li);
+  });
+}
+
+
