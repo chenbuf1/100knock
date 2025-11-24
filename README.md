@@ -544,3 +544,18 @@ console.log("オブジェクト：", student);
 以下は表示結果のスクリーンショットである：
 <img width="418" height="58" alt="66eb0110be5209d05c94eaee034c4bf4" src="https://github.com/user-attachments/assets/4b03e4a1-0c3e-4dfa-bfcf-46dff8eb794e" />
 
+
+
+
+# 35. マウスイベント処理
+コードである：
+
+
+
+
+
+
+
+以下は表示結果のスクリーンショットである：
+<img width="1136" height="1162" alt="68d908f07a387e553024459513f1260e" src="https://github.com/user-attachments/assets/fc9c0e55-95e1-4182-9b06-280eaa745c3a" />
+
