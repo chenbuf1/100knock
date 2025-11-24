@@ -548,15 +548,25 @@ console.log("オブジェクト：", student);
 
 
 # 35. マウスイベント処理
-まず、main.jsにボタンを作ります。
-<img width="1018" height="890" alt="df2c09a55cef70c622b8943768ef3842" src="https://github.com/user-attachments/assets/4236c552-ff24-4da3-aa44-c5eeec26aa6c" />
+まず、js.htmlにボタンを作ります。
+<img width="600" height="400" alt="df2c09a55cef70c622b8943768ef3842" src="https://github.com/user-attachments/assets/4236c552-ff24-4da3-aa44-c5eeec26aa6c" />
 
+main.jsのコードである：
+<img width="600" height="400" alt="c566871765bf102b70c9ecb6dce56ba6" src="https://github.com/user-attachments/assets/134cdd36-fa8d-456a-9540-b96a025454e9" />
 
+```
+const button = document.getElementById("clickButton")
+```
+このコードは、js.html 全体（＝document）の中から、
+id="clickButton" っていうボタンを探して、変数 button に入れてます。
 
-コードである：
-
-
-
+```
+button.addEventListener("click",()=>{
+  console.log("ボタンがクリックされました!");
+});
+```
+次のコードで「このボタンがクリックされた時に何をするか」を決めてます。
+ボタンをクリックすると、テキストが「clickButton」だから、「click」が検知されて、下のコードconsole.log でメッセージを出すようにしてます。
 
 
 
