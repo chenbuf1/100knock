@@ -123,7 +123,7 @@ fruits.forEach(fruit => {
 const todos = []; // 空配列を用意
 const input = document.getElementById("todoInput");
 const add = document.getElementById("addBtn");
-const list = document.getElementById("todoList");
+const todolist = document.getElementById("todoList");
 
 add.addEventListener("click", () => {
   const value = input.value.trim(); // 空白除去
@@ -135,11 +135,11 @@ add.addEventListener("click", () => {
 });
 
 function renderList() {
-  list.innerHTML = ""; // 一旦全削除
+  todolist.innerHTML = ""; // 一旦全削除
   todos.forEach(todo => {
-    const li = document.createElement("li");
-    li.textContent = todo;
-    list.appendChild(li);
+    const a = document.createElement("li");
+    a.textContent = todo;
+    todolist.appendChild(a);
   });
 }
 
