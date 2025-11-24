@@ -97,8 +97,12 @@ submitEmail.addEventListener("click", () => {
 
 // 3. DOM操作 → <p> の内容を書き換え
 const msg = document.getElementById("msg");
-const changeBtn = document.getElementById("changeBtn");
+const toggleBtn = document.getElementById("toggleBtn");
 
-changeBtn.addEventListener("click", () => {
-  msg.textContent = "こんにちは、DOMが書き換えられました！";
+toggleBtn.addEventListener("click", () => {
+  if (msg.textContent === "Hello") {
+    msg.textContent = "こんにちは";
+  } else {
+    msg.textContent = "Hello";
+  }
 });
