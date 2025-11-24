@@ -94,3 +94,11 @@ submitEmail.addEventListener("click", () => {
   emailDisplay.textContent = "入力されたメールアドレス：" + email;
   console.log("入力されたメールアドレス：" + email);
 });
+
+// 3. DOM操作 → <p> の内容を書き換え
+const msg = document.getElementById("msg");
+const changeBtn = document.getElementById("changeBtn");
+
+changeBtn.addEventListener("click", () => {
+  msg.textContent = "こんにちは、DOMが書き換えられました！";
+});
