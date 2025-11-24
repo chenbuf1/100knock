@@ -16,3 +16,30 @@ let student = {
 console.log("変数：", x);
 console.log("配列：", fruits);
 console.log("オブジェクト：", student);
+
+
+// 二つの数を定義
+let a = 15;
+let b = 8;
+
+// 四則演算
+let sum = a + b;
+let diff = a - b;
+let product = a * b;
+let quotient = a / b;
+
+// 結果出力
+console.log("a =", a, "b =", b);
+console.log("和（a + b）：", sum);
+console.log("差（a - b）：", diff);
+console.log("積（a * b）：", product);
+console.log("商（a / b）：", quotient);
+
+// if文による比較
+if (a > b) {
+  console.log("a は b より大きい");
+} else if (a < b) {
+  console.log("a は b より小さい");
+} else {
+  console.log("a と b は等しい");
+}
