@@ -512,19 +512,25 @@ console.log("オブジェクト：", student);
 
 
 # 32. 基本的な演算と条件分岐
+
+
 コードである：
 <img width="606" height="1048" alt="a917b0d26878e597a263ac8a47babe0a" src="https://github.com/user-attachments/assets/748899f3-8732-4b99-8c9f-baa6ba013dba" />
+
 
 以下は表示結果のスクリーンショットである：
 <img width="590" height="294" alt="cb61c61eee3e99ac8b675b153b5e0592" src="https://github.com/user-attachments/assets/439b61d0-98da-43f5-b7d4-c93f2d7b0048" />
 
 
+
 # 33. 繰り返し処理
+
+
 コードである：
-
 <img width="762" height="576" alt="e7b7ae770a44a9856a86fe4930e5f1b5" src="https://github.com/user-attachments/assets/af81fa0e-df01-4cad-8fef-9ac117843f48" />
-以下は表示結果のスクリーンショットである：
 
+
+以下は表示結果のスクリーンショットである：
 <img width="352" height="412" alt="7915aeec9b37c680907902d3c65d9825" src="https://github.com/user-attachments/assets/26dccd05-51a2-4f41-9532-c494cd66c903" />
 
 
