@@ -480,4 +480,7 @@ img {
 ```js
 console.log("Hello, JavaScript!");
 ```
+以下は表示結果のスクリーンショットである：
+<img width="910" height="322" alt="5d148dc6998576e3f88c3db41895e616" src="https://github.com/user-attachments/assets/e9497bcc-bb3e-4484-89e4-be6fa18b8cfb" />
+
 
