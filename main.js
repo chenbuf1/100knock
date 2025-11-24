@@ -4,7 +4,7 @@ console.log("Hello, JavaScript!");
 let x = 10;
 
 // 配列の定義
-let fruits = ["りんご", "バナナ", "みかん"];
+let fruits = ["りんご", "バナナ", "みかん", "ぶどう"];
 
 // オブジェクトの定義
 let student = {
@@ -42,4 +42,21 @@ if (a > b) {
   console.log("a は b より小さい");
 } else {
   console.log("a と b は等しい");
+}
+
+
+
+
+// for文による出力
+console.log("【for文で出力】");
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+
+// while文による出力
+console.log("【while文で出力】");
+let i = 0;
+while (i < fruits.length) {
+  console.log(fruits[i]);
+  i++;
 }
