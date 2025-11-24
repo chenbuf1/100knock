@@ -1,7 +1,7 @@
 console.log("Hello, JavaScript!");
 
 // 変数の定義
-let message = "こんにちは、JavaScript！";
+let x = 10;
 
 // 配列の定義
 let fruits = ["りんご", "バナナ", "みかん"];
@@ -13,6 +13,6 @@ let student = {
 };
 
 // コンソール出力
-console.log("変数：", message);
+console.log("変数：", x);
 console.log("配列：", fruits);
 console.log("オブジェクト：", student);
