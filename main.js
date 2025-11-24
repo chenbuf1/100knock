@@ -60,3 +60,18 @@ while (i < fruits.length) {
   console.log(fruits[i]);
   i++;
 }
+
+
+
+// アロー関数の定義：2つの数を受け取り、合計を返す
+const addNumbers = (a, b) => {
+  return a + b;
+};
+
+// 関数の呼び出しと出力
+const result = addNumbers(12, 8);
+console.log("関数の実行結果：", result);
+
+
+
+
