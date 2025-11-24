@@ -75,3 +75,12 @@ console.log("関数の実行結果：", result);
 
 
 
+// ボタン要素を取得
+const button = document.getElementById("clickButton");
+
+// クリックイベントリスナーを追加
+button.addEventListener("click", () => {
+  console.log("ボタンがクリックされました！");
+});
+
+
