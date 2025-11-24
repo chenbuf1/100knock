@@ -548,6 +548,11 @@ console.log("オブジェクト：", student);
 
 
 # 35. マウスイベント処理
+まず、main.jsにボタンを作ります。
+<img width="1018" height="890" alt="df2c09a55cef70c622b8943768ef3842" src="https://github.com/user-attachments/assets/4236c552-ff24-4da3-aa44-c5eeec26aa6c" />
+
+
+
 コードである：
 
 
