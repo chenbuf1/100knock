@@ -739,3 +739,30 @@ curl -X POST -H "Content-Type: application/json" \
 //GETで全体確認：
 curl http://localhost:3000/api/tools
 ```
+
+
+#48 
+```js
+app.delete('/api/animals/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+
+  if (isNaN(id) || id < 0 || id >= animals.length) {
+    return res.status(404).json({ error: 'Animal not found' });
+  }
+
+  animals.splice(id, 1); // 指定位置の動物を削除
+
+  res.json(animals); // 削除後の配列を返す
+});
+```
+動作確認（curl）
+```bash
+//delete 2nd animal, is eleplant
+curl -X DELETE http://localhost:3000/api/animals/2
+// delete 2nd animal again, now is lion
+curl -X DELETE http://localhost:3000/api/animals/2
+// {"error":"Animal not found"}
+curl -X DELETE http://localhost:3000/api/animals/10
+```
+
+
