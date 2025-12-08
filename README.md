@@ -591,9 +591,9 @@ REST API の主な特徴は、ステートレスであることです。ステ�
 
 
 
-## 課題41 ソースコード
+# 41. シンプルなHTTPサーバ
 
-\`\`\`js
+```js
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -605,14 +605,11 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
-\`\`\`
+```
+動作確認（curl）
 
-## 動作確認（curl）
-
-\`\`\`bash
+```bash
 curl http://localhost:3000/
-\`\`\`
-
-\`\`\`
-Hello, API!
-\`\`\`
+```
+結果
+<img width="736" height="330" alt="1cffd161-c872-46df-a6a3-743802d5d76c" src="https://github.com/user-attachments/assets/9380ef12-b637-4713-887d-73d5d1c6555f" />
