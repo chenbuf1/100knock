@@ -12,6 +12,12 @@ app.get('/api/greet', (req, res) => {
   res.json({ message: 'Hello!' });
 });
 
+// 43: クエリパラメータに対応する /api/greet
+app.get('/api/greet', (req, res) => {
+  const name = req.query.name || 'Guest'; // nameが無ければ Guest とする
+  res.json({ message: `Hello, ${name}!` });
+});
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
