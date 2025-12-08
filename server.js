@@ -44,7 +44,8 @@ app.get('/api/animals/:id', (req, res) => {
   }
 });
 
-// 第47題用：工具リスト
+// 47
+//工具リスト
 const tools = ['notebook', 'pen', 'ruler'];
 
 // GET: 現在のツール一覧を取得
@@ -62,6 +63,20 @@ app.post('/api/tools', (req, res) => {
   tools.push(newTool);
   res.json(tools);
 });
+
+//  48：DELETEメソッドで指定の動物を削除
+app.delete('/api/animals/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+
+  if (isNaN(id) || id < 0 || id >= animals.length) {
+    return res.status(404).json({ error: 'Animal not found' });
+  }
+
+  animals.splice(id, 1); // 指定位置の動物を削除
+
+  res.json(animals); // 削除後の配列を返す
+});
+
 
 
 app.listen(port, () => {
