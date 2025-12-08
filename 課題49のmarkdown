@@ -1,0 +1,96 @@
+# 📘 REST API 課題（41〜48）まとめ
+
+---
+
+## ✅ 課題41：固定テキストを返す API
+
+| 項目     | 内容                       |
+|----------|----------------------------|
+| メソッド | GET                        |
+| パス     | `/`                        |
+| 概要     | 「Hello, API!」という文字列を返す |
+| 例       | `curl http://localhost:3000/` |
+| 応答     | `Hello, API!`              |
+
+---
+
+## ✅ 課題42：固定 JSON を返す API
+
+| 項目     | 内容                        |
+|----------|-----------------------------|
+| メソッド | GET                         |
+| パス     | `/api/greet`                |
+| 概要     | `{"message": "Hello!"}` を返す |
+| 例       | `curl http://localhost:3000/api/greet` |
+| 応答     | `{"message":"Hello!"}`      |
+
+---
+
+## ✅ 課題43：クエリパラメータで名前を受け取る API
+
+| 項目     | 内容                                |
+|----------|-------------------------------------|
+| メソッド | GET                                 |
+| パス     | `/api/greet-with-query`             |
+| パラメータ | `name`（クエリパラメータ）          |
+| 例       | `curl "http://localhost:3000/api/greet-with-query?name=Ushiama"` |
+| 応答     | `{"message":"Hello, Ushiama!"}`     |
+
+---
+
+## ✅ 課題44：POST された JSON をそのまま返す API
+
+| 項目     | 内容                                |
+|----------|-------------------------------------|
+| メソッド | POST                                |
+| パス     | `/api/echo`                         |
+| ボディ   | JSON（任意）                        |
+| 例       | `curl -X POST -H "Content-Type: application/json" -d '{"name":"Chen", "message":"Hi"}' http://localhost:3000/api/echo` |
+| 応答     | `{"name":"Chen","message":"Hi"}`    |
+
+---
+
+## ✅ 課題45：配列（fruits）を返す API
+
+| 項目     | 内容                       |
+|----------|----------------------------|
+| メソッド | GET                        |
+| パス     | `/api/fruits`              |
+| 例       | `curl http://localhost:3000/api/fruits` |
+| 応答     | `["apple","banana","orange"]` |
+
+---
+
+## ✅ 課題46：パスパラメータで動物を取得する API
+
+| 項目     | 内容                       |
+|----------|----------------------------|
+| メソッド | GET                        |
+| パス     | `/api/animals/:id`         |
+| パラメータ | `:id`（インデックス番号） |
+| 例       | `curl http://localhost:3000/api/animals/2` |
+| 応答     | `{"animal":"elephant"}`    |
+
+---
+
+## ✅ 課題47：POST で新しいツールを追加する API
+
+| 項目     | 内容                                |
+|----------|-------------------------------------|
+| メソッド | POST                                |
+| パス     | `/api/tools`                        |
+| ボディ   | JSON：`{ "tool": "keyboard" }`      |
+| 例       | `curl -X POST -H "Content-Type: application/json" -d '{"tool":"keyboard"}' http://localhost:3000/api/tools` |
+| 応答     | `["notebook","pen","ruler","keyboard"]`（追加後の全体） |
+
+---
+
+## ✅ 課題48：DELETE で動物を削除する API
+
+| 項目     | 内容                       |
+|----------|----------------------------|
+| メソッド | DELETE                     |
+| パス     | `/api/animals/:id`         |
+| パラメータ | `:id`（削除したいインデックス） |
+| 例       | `curl -X DELETE http://localhost:3000/api/animals/2` |
+| 応答     | `["cat","dog","lion"]`（削除後） |
