@@ -632,3 +632,21 @@ curl http://localhost:3000/api/greet
 結果
 <img width="846" height="312" alt="82a6143f-7714-49b6-8dcd-105c4ac8f4df" src="https://github.com/user-attachments/assets/7fea1fee-cfd6-48bf-96ff-824a331435d6" />
 
+
+
+43. クエリパラメータ付きのGETリクエストへの対応
+```js
+app.get('/api/greet-with-name', (req, res) => {
+  const name = req.query.name || 'Guest';
+  res.json({ message: `Hello, ${name}!` });
+});
+```
+
+動作確認（curl）
+
+```bash
+curl http://localhost:3000/api/greet-with-name?name=Ushiama
+```
+結果
+<img width="1154" height="222" alt="d07361cb-ff11-4255-891f-7b716677ba1a" src="https://github.com/user-attachments/assets/3b3bd476-4a9d-44bc-b5ef-56f4cf46630d" />
+
