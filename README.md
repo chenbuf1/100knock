@@ -669,9 +669,10 @@ curl -X POST http://localhost:3000/api/echo \
   -d '{"name":"Chen", "message":"Hi"}'
 
 // -X POST  POSTメソッドを使うことを指定します（デフォルトは GET）。
-   -H "Content-Type: application/json"  リクエストヘッダを設定し、サーバーに「これは JSON データですよ」と伝えます。
-   -d '{...}'   リクエストの中身を指定します。ここでは JSON 形式の文字列を送信します。
+// -H "Content-Type: application/json"  リクエストヘッダを設定し、サーバーに「これは JSON データですよ」と伝えます。
+// -d '{...}'   リクエストの中身を指定します。ここでは JSON 形式の文字列を送信します。
 ```
 結果
+<img width="926" height="124" alt="5a6e757d-21c9-419a-9a8b-5a797db58cc6" src="https://github.com/user-attachments/assets/d2e296d4-309e-4741-b051-63ee98803c69" />
 
 
