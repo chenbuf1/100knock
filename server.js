@@ -23,7 +23,7 @@ app.use(express.json());
 
 app.post('/api/echo', (req, res) => {
   res.json(req.body);
-  
+});
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
