@@ -707,3 +707,35 @@ curl http://localhost:3000/api/animals/2
 // incorrect
 curl http://localhost:3000/api/animals/10
 ```
+
+
+# 47
+```js
+const tools = ['notebook', 'pen', 'ruler'];
+
+// GET: 現在のツール一覧を取得
+app.get('/api/tools', (req, res) => {
+  res.json(tools);
+});
+
+// POST: 新しいツールを追加
+app.post('/api/tools', (req, res) => {
+  const newTool = req.body.tool;
+
+  if (!newTool || typeof newTool !== 'string') {
+    return res.status(400).json({ error: 'Invalid tool name' });
+  }
+
+  tools.push(newTool);
+  res.json(tools);
+});
+```
+動作確認（curl）
+```bash
+curl -X POST -H "Content-Type: application/json" \
+  -d '{"tool": "keyboard"}' \
+  http://localhost:3000/api/tools
+
+//GETで全体確認：
+curl http://localhost:3000/api/tools
+```
