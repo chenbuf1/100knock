@@ -31,6 +31,19 @@ app.get('/api/items', (req, res) => {
   res.json(items);
 });
 
+// 46. パスパラメータでデータを取得するAPIの作成
+const animals = ['cat', 'dog', 'elephant', 'lion'];
+
+app.get('/api/animals/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  
+  if (id >= 0 && id < animals.length) {
+    res.json({ animal: animals[id] });
+  } else {
+    res.status(404).json({ error: 'Animal not found' });
+  }
+});
+
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
