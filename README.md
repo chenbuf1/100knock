@@ -662,7 +662,6 @@ app.post('/api/echo', (req, res) => {
 });
 ```
 動作確認（curl）
-
 ```bash
 curl -X POST http://localhost:3000/api/echo \
   -H "Content-Type: application/json" \
@@ -675,4 +674,36 @@ curl -X POST http://localhost:3000/api/echo \
 結果
 <img width="926" height="124" alt="5a6e757d-21c9-419a-9a8b-5a797db58cc6" src="https://github.com/user-attachments/assets/d2e296d4-309e-4741-b051-63ee98803c69" />
 
+# 45. 配列データを返すAPIの実装
+```js
+app.get('/api/items', (req, res) => {
+  const items = ['apple', 'banana', 'orange'];
+  res.json(items);
+});
+```
+動作確認（curl）
+```bash
+curl http://localhost:3000/api/items
+```
 
+# 46. パスパラメータでデータを取得するAPIの作成
+```js
+const animals = ['cat', 'dog', 'elephant', 'lion'];
+
+app.get('/api/animals/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  
+  if (id >= 0 && id < animals.length) {
+    res.json({ animal: animals[id] });
+  } else {
+    res.status(404).json({ error: 'Animal not found' });
+  }
+});
+```
+動作確認（curl）
+```bash
+// correct
+curl http://localhost:3000/api/animals/2
+// incorrect
+curl http://localhost:3000/api/animals/10
+```
