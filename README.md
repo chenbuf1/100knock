@@ -613,3 +613,22 @@ curl http://localhost:3000/
 ```
 結果
 <img width="736" height="330" alt="1cffd161-c872-46df-a6a3-743802d5d76c" src="https://github.com/user-attachments/assets/9380ef12-b637-4713-887d-73d5d1c6555f" />
+
+
+
+42. GETリクエストに対応したAPIの作成
+```js
+app.get('/api/greet', (req, res) => {
+  res.json({ message: 'Hello!' });
+});	
+```
+
+動作確認（curl）
+
+```bash
+curl http://localhost:3000/api/greet
+```
+
+結果
+<img width="846" height="312" alt="82a6143f-7714-49b6-8dcd-105c4ac8f4df" src="https://github.com/user-attachments/assets/7fea1fee-cfd6-48bf-96ff-824a331435d6" />
+
