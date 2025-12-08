@@ -1,0 +1,24 @@
+{
+  "name": "git_100knock",
+  "version": "1.0.0",
+  "description": "実行結果： ``` git version 2.39.5 (Apple Git-154) ```",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenbuf1/100knock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/chenbuf1/100knock/issues"
+  },
+  "homepage": "https://github.com/chenbuf1/100knock#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
