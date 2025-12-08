@@ -25,6 +25,13 @@ app.post('/api/echo', (req, res) => {
   res.json(req.body);
 });
 
+// 45. 配列データを返すAPIの実装
+app.get('/api/items', (req, res) => {
+  const items = ['apple', 'banana', 'orange'];
+  res.json(items);
+});
+
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
