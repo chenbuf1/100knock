@@ -13,8 +13,8 @@ app.get('/api/greet', (req, res) => {
 });
 
 // 43: クエリパラメータに対応する /api/greet
-app.get('/api/greet', (req, res) => {
-  const name = req.query.name || 'Guest'; // nameが無ければ Guest とする
+app.get('/api/greet-with-name', (req, res) => {
+  const name = req.query.name || 'Guest';
   res.json({ message: `Hello, ${name}!` });
 });
 
