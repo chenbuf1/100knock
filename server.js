@@ -44,6 +44,25 @@ app.get('/api/animals/:id', (req, res) => {
   }
 });
 
+// 第47題用：工具リスト
+const tools = ['notebook', 'pen', 'ruler'];
+
+// GET: 現在のツール一覧を取得
+app.get('/api/tools', (req, res) => {
+  res.json(tools);
+});
+// POST: 新しいツールを追加
+app.post('/api/tools', (req, res) => {
+  const newTool = req.body.tool;
+
+  if (!newTool || typeof newTool !== 'string') {
+    return res.status(400).json({ error: 'Invalid tool name' });
+  }
+
+  tools.push(newTool);
+  res.json(tools);
+});
+
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
