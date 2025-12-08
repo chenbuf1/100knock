@@ -616,7 +616,7 @@ curl http://localhost:3000/
 
 
 
-42. GETリクエストに対応したAPIの作成
+# 42. GETリクエストに対応したAPIの作成
 ```js
 app.get('/api/greet', (req, res) => {
   res.json({ message: 'Hello!' });
@@ -634,7 +634,7 @@ curl http://localhost:3000/api/greet
 
 
 
-43. クエリパラメータ付きのGETリクエストへの対応
+# 43. クエリパラメータ付きのGETリクエストへの対応
 ```js
 app.get('/api/greet-with-name', (req, res) => {
   const name = req.query.name || 'Guest';
@@ -649,4 +649,29 @@ curl http://localhost:3000/api/greet-with-name?name=Ushiama
 ```
 結果
 <img width="1154" height="222" alt="d07361cb-ff11-4255-891f-7b716677ba1a" src="https://github.com/user-attachments/assets/3b3bd476-4a9d-44bc-b5ef-56f4cf46630d" />
+
+
+# 44. POSTリクエストでのデータを受け取りとJSONでの応答
+```js
+app.use(express.json());
+// Express は JSON を自動で解析しないため、Content-Type: application/json のデータをオブジェクトとして扱う設定が必要です。
+
+app.post('/api/echo', (req, res) => {
+  res.json(req.body);
+//前と同じで、JSONのコードを body に変えるだけで、「受け取ったJSONをそのまま返す」という意味になります。 
+});
+```
+動作確認（curl）
+
+```bash
+curl -X POST http://localhost:3000/api/echo \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Chen", "message":"Hi"}'
+
+// -X POST  POSTメソッドを使うことを指定します（デフォルトは GET）。
+   -H "Content-Type: application/json"  リクエストヘッダを設定し、サーバーに「これは JSON データですよ」と伝えます。
+   -d '{...}'   リクエストの中身を指定します。ここでは JSON 形式の文字列を送信します。
+```
+結果
+
 
