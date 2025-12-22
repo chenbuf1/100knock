@@ -799,7 +799,8 @@ CREATE TABLE products (
 
 結果
 ```
-<img width="822" height="388" alt="410dda05-90af-4e33-bd42-8d74ddca41df" src="https://github.com/user-attachments/assets/1818c67d-f7fb-4327-8bb5-f5e1b11f0c35" />
+<img width="426" height="284" alt="bda8196233d882ef59045bdca59805e2" src="https://github.com/user-attachments/assets/ee9d77da-c948-4d96-90d0-398159b17ec5" />
+
 ```
 
 
