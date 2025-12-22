@@ -122,6 +122,40 @@ app.post('/submit', (req, res) => {
   });
 });
 
+// データを編集するAPI（update）
+app.put('/api/products/:id', (req, res) => {
+  const id = req.params.id;
+  const { name, price, stock } = req.body;
+
+  const sql = `UPDATE products SET name = ?, price = ?, stock = ? WHERE id = ?`;
+  db.run(sql, [name, price, stock, id], function (err) {
+    if (err) {
+      console.error(err.message);
+      res.status(500).json({ error: '編集に失敗しました' });
+    } else {
+      res.json({ message: '編集しました', changes: this.changes });
+    }
+  });
+});
+
+// データを削除するAPI（DELETE）
+app.delete('/api/products/:id', (req, res) => {
+  const id = req.params.id;
+
+  const sql = `DELETE FROM products WHERE id = ?`;
+  db.run(sql, [id], function (err) {
+    if (err) {
+      console.error(err.message);
+      res.status(500).json({ error: '削除に失敗しました' });
+    } else {
+      res.json({ message: '削除成功', changes: this.changes });
+    }
+  });
+});
+
+
+
+
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
