@@ -911,8 +911,16 @@ node listTables.js
 ```
 
 # 57 Webサーバとデータベースの連携
+updated server.js code:
+```
 
+```
 
+結果
+```
+<img width="1152" height="362" alt="90e499cd532f3054cba004cf243dad43" src="https://github.com/user-attachments/assets/f099ac41-616b-42f4-b955-5ff52e110951" />
+
+```
 
 # 58 Webフォームからの入力データをデータベースに登録
 
