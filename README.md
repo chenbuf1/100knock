@@ -913,7 +913,24 @@ node listTables.js
 # 57 Webサーバとデータベースの連携
 updated server.js code:
 ```
+const sqlite3 = require('sqlite3').verbose();
+const path = require('path');
+const dbPath = path.join(__dirname, 'mydata.db');
+const db = new sqlite3.Database(dbPath);
 
+// 57.API: /api/products → DBのレコード一覧をJSONで返す
+app.get('/api/products', (req, res) => {
+  const sql = 'SELECT * FROM products';
+
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      console.error('DB error:', err.message);
+      res.status(500).json({ error: 'Database error' });
+    } else {
+      res.json(rows);
+    }
+  });
+});
 ```
 
 結果
