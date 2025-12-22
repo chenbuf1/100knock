@@ -1,6 +1,12 @@
 const express = require('express');
+const sqlite3 = require('sqlite3').verbose();
+const path = require('path');
 const app = express();
 const port = 3000;
+
+// 57setting.データベースファイルのパス（相对路径）
+const dbPath = path.join(__dirname, 'db', 'mydata.db');
+const db = new sqlite3.Database(dbPath);
 
 // 41：根路径，返回文本
 app.get('/', (req, res) => {
@@ -77,6 +83,19 @@ app.delete('/api/animals/:id', (req, res) => {
   res.json(animals); // 削除後の配列を返す
 });
 
+// 57.API: /api/products → DBのレコード一覧をJSONで返す
+app.get('/api/products', (req, res) => {
+  const sql = 'SELECT * FROM products';
+
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      console.error('DB error:', err.message);
+      res.status(500).json({ error: 'Database error' });
+    } else {
+      res.json(rows);
+    }
+  });
+});
 
 
 app.listen(port, () => {
