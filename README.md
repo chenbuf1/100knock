@@ -866,9 +866,53 @@ sqlite> SELECT * FROM products
 
 
 # 56 Node.jsからデータベースに接続
+コード
+```
+cat <<EOF > listTables.js //create js
+// sqlite3 ライブラリを読み込む
+const sqlite3 = require('sqlite3').verbose();
+// データベースファイル mydata.db に接続
+const db = new sqlite3.Database('./mydata.db', (err) => {
+  if (err) {
+    console.error('データベース接続エラー:', err.message);
+    return;
+  }
+  console.log('データベースに接続しました');
+});
+// テーブル一覧を取得するSQL
+const sql = \`SELECT name FROM sqlite_master WHERE type='table'\`;
+// SQLを実行して結果を表示
+db.all(sql, [], (err, rows) => {
+  if (err) {
+    console.error('テーブル一覧取得エラー:', err.message);
+    return;
+  }
 
+  console.log('テーブル一覧:');
+  rows.forEach((row) => {
+    console.log(\`- \${row.name}\`);
+  });
+  // データベースを閉じる
+  db.close((err) => {
+    if (err) {
+      console.error('データベース終了エラー:', err.message);
+    }
+  });
+});
+EOF
+```
+
+結果
+node listTables.js
+```
+データベースに接続しました
+テーブル一覧:
+- products
+```
 
 # 57 Webサーバとデータベースの連携
+
+
 
 # 58 Webフォームからの入力データをデータベースに登録
 
