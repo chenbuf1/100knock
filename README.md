@@ -741,7 +741,7 @@ curl http://localhost:3000/api/tools
 ```
 
 
-#48 
+# 48 
 ```js
 app.delete('/api/animals/:id', (req, res) => {
   const id = parseInt(req.params.id);
@@ -766,3 +766,70 @@ curl -X DELETE http://localhost:3000/api/animals/10
 ```
 
 
+# 50 データベースとは何か
+まとめ：
+```
+データベース（DB）は、データを効率的に保存・管理・検索する仕組みであり、業務システムやWebアプリなどに広く利用されている。中でもRDBMS（関係データベース管理システム）は、データを表（テーブル）として管理し、SQL言語を用いて操作できるのが特徴である。データの整合性・一貫性を保ちやすく、複数のテーブル間の関係を定義することができるため、銀行・企業・医療機関など、大量データを扱う分野で活用されている。
+```
+
+# 51 SQLiteを用いたデータベースの作成
+実行コマンド：
+```bash
+sqlite3 mydata.db
+sqlite> .tables
+sqlite> .exit
+```
+
+結果
+```bash
+ls -l mydata.db
+-rw-r--r--  1 cesc  staff  0 Dec 22 09:43 mydata.db
+```
+
+# 52 SQLでテーブルを作成
+実行したSQL文:
+```
+CREATE TABLE products (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  price REAL,
+  stock INTEGER DEFAULT 0
+);
+```
+
+結果
+```
+<img width="822" height="388" alt="410dda05-90af-4e33-bd42-8d74ddca41df" src="https://github.com/user-attachments/assets/1818c67d-f7fb-4327-8bb5-f5e1b11f0c35" />
+```
+
+
+# 53 レコードの追加・検索
+結果
+```
+<img width="818" height="374" alt="9683232a-2886-4429-8792-5e29f85c1d08" src="https://github.com/user-attachments/assets/32cc790d-5a71-4a55-b96b-bdf9883af46e" />
+
+```
+
+
+# 54 レコードの更新・削除
+結果
+```
+<img width="472" height="256" alt="e8378788-3f4b-4ef2-a736-2bd707df6fea" src="https://github.com/user-attachments/assets/70afcbcd-54e1-41a0-8c60-8e0eed8a1a37" />
+```
+
+
+# 55 複数条件での検索や並べ替え
+結果
+```
+<img width="674" height="172" alt="cbb6cefc-91b2-4f4d-9d24-cba1f3c53691" src="https://github.com/user-attachments/assets/f40d68d3-c214-47a2-a623-5eeeeffbf014" />
+```
+
+
+# 56 Node.jsからデータベースに接続
+
+
+# 57 Webサーバとデータベースの連携
+
+# 58 Webフォームからの入力データをデータベースに登録
+
+# 59 登録データの編集・削除機能の実装
