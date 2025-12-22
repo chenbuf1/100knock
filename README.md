@@ -941,4 +941,6 @@ app.get('/api/products', (req, res) => {
 
 # 58 Webフォームからの入力データをデータベースに登録
 
+create a public file and create form.html
+
 # 59 登録データの編集・削除機能の実装
