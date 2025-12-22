@@ -798,9 +798,21 @@ CREATE TABLE products (
 ```
 
 結果
+```bash
+sqlite> .table
 ```
-<img width="426" height="284" alt="bda8196233d882ef59045bdca59805e2" src="https://github.com/user-attachments/assets/ee9d77da-c948-4d96-90d0-398159b17ec5/52.png" />
+
+products
+```bash
+sqlite> .schema products
 ```
+CREATE TABLE products (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  price REAL,
+  stock INTEGER DEFAULT 0
+);
+
 
 
 # 53 レコードの追加・検索
