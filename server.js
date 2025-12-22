@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 // 57setting.データベースファイルのパス（相对路径）
-const dbPath = path.join(__dirname, 'db', 'mydata.db');
+const dbPath = path.join(__dirname, 'mydata.db');
 const db = new sqlite3.Database(dbPath);
 
 // 41：根路径，返回文本
