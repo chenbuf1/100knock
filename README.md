@@ -943,4 +943,35 @@ app.get('/api/products', (req, res) => {
 
 create a public file and create form.html
 
+server.js code edited
+```bash
+// POST请求的body解析
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// 静态文件（HTMLフォーム）配信
+app.use(express.static(path.join(__dirname, 'public')));
+
+// POST: /submit → 表单数据插入数据库
+app.post('/submit', (req, res) => {
+  const { name, price } = req.body;
+
+  const sql = 'INSERT INTO products (name, price) VALUES (?, ?)';
+  db.run(sql, [name, price], function (err) {
+    if (err) {
+      console.error('DB insert error:', err.message);
+      res.status(500).send('データ登録失敗');
+    } else {
+      res.send(`登録成功！商品ID: ${this.lastID}`);
+    }
+  });
+});
+```
+
+結果
+```
+<img width="1158" height="548" alt="7c34b732308efd5dead336174653167c" src="https://github.com/user-attachments/assets/38393b14-ee47-40e9-9b5b-5cdb5adb332c" />
+<img width="970" height="294" alt="1bbe8123f06425cf7a0f7df99d8a8067" src="https://github.com/user-attachments/assets/05767650-385f-41cf-bd69-eac1882441f4" />
+<img width="508" height="218" alt="ceb708ce8913c6c0d2f9af6e28ec0cc5" src="https://github.com/user-attachments/assets/a88a6122-204a-46af-803f-7b127faa77f4" />
+```
 # 59 登録データの編集・削除機能の実装
