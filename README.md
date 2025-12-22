@@ -798,42 +798,70 @@ CREATE TABLE products (
 ```
 
 結果
-```bash
 sqlite> .table
-```
-
-products
 ```bash
-sqlite> .schema products
+products
 ```
+sqlite> .schema products
+```bash
 CREATE TABLE products (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL,
   price REAL,
   stock INTEGER DEFAULT 0
 );
-
+```
 
 
 # 53 レコードの追加・検索
-結果
+実行したSQL文:
 ```
-<img width="818" height="374" alt="9683232a-2886-4429-8792-5e29f85c1d08" src="https://github.com/user-attachments/assets/32cc790d-5a71-4a55-b96b-bdf9883af46e" />
+sqlite> INSERT INTO products (name, price, stock)
+   ...> VALUES
+   ...>   ('apple', 100.00, 10),
+   ...>   ('watermelon', 2000.00, 5),
+   ...>   ('berry', 300.00, 8);
+```
 
+結果
+sqlite> SELECT * FROM products;
+```bash
+1|apple|100.0|10
+2|watermelon|2000.0|5
+3|berry|300.0|8
 ```
 
 
 # 54 レコードの更新・削除
-結果
+実行したSQL文:
 ```
-<img width="472" height="256" alt="e8378788-3f4b-4ef2-a736-2bd707df6fea" src="https://github.com/user-attachments/assets/70afcbcd-54e1-41a0-8c60-8e0eed8a1a37" />
+sqlite> UPDATE products
+   ...> SET stock = 10
+   ...> WHERE id = 2;
+sqlite> DELETE FROM products
+   ...> WHERE id = 3;
+```
+
+結果
+SELECT * FROM products;
+```
+1|apple|100.0|10
+2|watermelon|2000.0|10
 ```
 
 
 # 55 複数条件での検索や並べ替え
+実行したSQL文:
+```
+sqlite> SELECT * FROM products
+   ...> WHERE stock > 0 AND price >= 1000
+   ...> ORDER BY price DESC;
+```
+
 結果
 ```
-<img width="674" height="172" alt="cbb6cefc-91b2-4f4d-9d24-cba1f3c53691" src="https://github.com/user-attachments/assets/f40d68d3-c214-47a2-a623-5eeeeffbf014" />
+2|watermelon|2000.0|10
+3|pineapple|1500.0|10
 ```
 
 
