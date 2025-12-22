@@ -98,6 +98,31 @@ app.get('/api/products', (req, res) => {
 });
 
 
+
+// 58 
+// POST请求的body解析
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// 静态文件（HTMLフォーム）配信
+app.use(express.static(path.join(__dirname, 'public')));
+
+// POST: /submit → 表单数据插入数据库
+app.post('/submit', (req, res) => {
+  const { name, price } = req.body;
+
+  const sql = 'INSERT INTO products (name, price) VALUES (?, ?)';
+  db.run(sql, [name, price], function (err) {
+    if (err) {
+      console.error('DB insert error:', err.message);
+      res.status(500).send('データ登録失敗');
+    } else {
+      res.send(`登録成功！商品ID: ${this.lastID}`);
+    }
+  });
+});
+
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
