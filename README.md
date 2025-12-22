@@ -975,3 +975,37 @@ app.post('/submit', (req, res) => {
 <img width="508" height="218" alt="ceb708ce8913c6c0d2f9af6e28ec0cc5" src="https://github.com/user-attachments/assets/a88a6122-204a-46af-803f-7b127faa77f4" />
 ```
 # 59 登録データの編集・削除機能の実装
+server.js code edited
+```bash
+// データを編集するAPI（update）
+app.put('/api/products/:id', (req, res) => {
+  const id = req.params.id;
+  const { name, price, stock } = req.body;
+
+  const sql = `UPDATE products SET name = ?, price = ?, stock = ? WHERE id = ?`;
+  db.run(sql, [name, price, stock, id], function (err) {
+    if (err) {
+      console.error(err.message);
+      res.status(500).json({ error: '編集に失敗しました' });
+    } else {
+      res.json({ message: '編集しました', changes: this.changes });
+    }
+  });
+});
+
+// データを削除するAPI（DELETE）
+app.delete('/api/products/:id', (req, res) => {
+  const id = req.params.id;
+
+  const sql = `DELETE FROM products WHERE id = ?`;
+  db.run(sql, [id], function (err) {
+    if (err) {
+      console.error(err.message);
+      res.status(500).json({ error: '削除に失敗しました' });
+    } else {
+      res.json({ message: '削除成功', changes: this.changes });
+    }
+  });
+});
+
+```
