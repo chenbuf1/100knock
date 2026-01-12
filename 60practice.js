@@ -7,6 +7,16 @@ app.use(express.json());
 
 const db = new sqlite3.Database("app.db");
 
+// セッション設定  65
+app.use(session({
+  secret: "your_secret_key", // 任意の文字列でOK（公開しない）
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 60000 } // セッションの有効期限（ミリ秒）
+}));
+
+const db = new sqlite3.Database("app.db");
+
 // ユーザ登録API  63
 app.post("/register", async (req, res) => {
   const { username, password } = req.body;
@@ -33,12 +43,22 @@ app.post("/login", (req, res) => {
 
     const match = await bcrypt.compare(password, row.password_hash);
     if (match) {
+      req.session.user = { id: row.id, username: row.username }; // セッションに保存  65
       res.json({ message: "Login successful", username: row.username });
     } else {
       res.status(401).send("Invalid username or password");
     }
   });
 });
+
+// ログイン済みユーザだけがアクセスできるエンドポイント 65
+app.get("/mypage", (req, res) => {
+  if (!req.session.user) {
+    return res.status(401).send("Unauthorized");
+  }
+  res.json({ message: "Welcome to your page!", user: req.session.user });
+});
+
 
 app.listen(3000, () => {
   console.log("✅ Server running at http://localhost:3000");
