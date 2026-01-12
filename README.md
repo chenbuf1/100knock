@@ -1074,6 +1074,20 @@ Webサイトが利用者のブラウザに保存する小さなデータであ�
 ```
 
 # 63 ユーザ登録API
+dbを作る
+<img width="842" height="190" alt="a81d5e41-132c-4300-b236-a3149ee00463" src="https://github.com/user-attachments/assets/39f56fca-3841-438f-b550-0798d9b8bfa6" />
+
+jsコード
+```js
+```
+
+結果：
+テストユーザーを作成する
+<img width="1144" height="174" alt="34be5a18-5e44-491b-b204-5d386f2d9b87" src="https://github.com/user-attachments/assets/c0decf1f-87ca-4ceb-a999-ff2f1cb77adf" />
+
+<img width="1018" height="182" alt="9ee31862-8f89-463f-a39a-949a56418fdc" src="https://github.com/user-attachments/assets/347c9836-a9be-4072-9258-3f7e9783c7f5" />
+
+
 # 64 ログインAPI
 # 65 セッション管理
 # 66 クッキーを利用したセッション管理
