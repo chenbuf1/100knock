@@ -1144,6 +1144,8 @@ app.post("/login", (req, res) => {
 # 65 セッション管理
 npm install express-session
 
+const session = require("express-session");
+
 // セッション設定
 ```js
 app.use(session({
