@@ -5,8 +5,6 @@ const sqlite3 = require("sqlite3").verbose();
 const app = express();
 app.use(express.json());
 
-const db = new sqlite3.Database("app.db");
-
 // セッション設定  65
 app.use(session({
   secret: "your_secret_key", // 任意の文字列でOK（公開しない）
