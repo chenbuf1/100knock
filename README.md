@@ -1118,6 +1118,14 @@ app.listen(3000, () => {
 
 
 # 64 ログインAPI
+コード：
+```js
+
+```
+
+結果；
+<img width="1150" height="320" alt="9fc1d2b8-071d-41e7-887f-d2d1f4e22114" src="https://github.com/user-attachments/assets/6a2b1b8e-e493-46ee-a4e6-884110c99329" />
+
 # 65 セッション管理
 # 66 クッキーを利用したセッション管理
 # 67 ログアウト処理
