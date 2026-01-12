@@ -1152,6 +1152,18 @@ app.use(session({
   cookie: { maxAge: 60000 } // セッションの有効期限（ミリ秒）
 }));
 
+<img width="1394" height="688" alt="e15c531b-2c12-4b9e-9dcb-3a7fdfa860c7" src="https://github.com/user-attachments/assets/35fcebe6-9264-4ac8-b5e5-03abd32132a7" />
+
+// ログイン済みユーザだけがアクセスできる
+app.get("/mypage", (req, res) => {
+  if (!req.session.user) {
+    return res.status(401).send("Unauthorized");
+  }
+  res.json({ message: "Welcome to your page!", user: req.session.user });
+});
+
+
+
 
 # 66 クッキーを利用したセッション管理
 # 67 ログアウト処理
