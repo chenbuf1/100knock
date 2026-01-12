@@ -11,7 +11,6 @@ app.use(session({
   secret: "your_secret_key", // 任意の文字列でOK（公開しない）
   resave: false,
   saveUninitialized: false,
-  cookie: { maxAge: 60000 } // セッションの有効期限（ミリ秒）
 }));
 
 const db = new sqlite3.Database("app.db");
