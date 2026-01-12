@@ -1,6 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const sqlite3 = require("sqlite3").verbose();
+const session = require("express-session");
 
 const app = express();
 app.use(express.json());
