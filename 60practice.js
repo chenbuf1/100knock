@@ -15,7 +15,7 @@ app.post("/register", async (req, res) => {
 
   // 存数据库
   db.run(
-    "INSERT INTO "60+ UsersData" (username, password_hash) VALUES (?, ?)",
+    "INSERT INTO users (username, password_hash) VALUES (?, ?)",
     [username, hash],
     function (err) {
       if (err) return res.status(500).send("error");
