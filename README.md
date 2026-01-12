@@ -1120,7 +1120,22 @@ app.listen(3000, () => {
 # 64 ログインAPI
 コード：
 ```js
+// ログインAPI  64
+app.post("/login", (req, res) => {
+  const { username, password } = req.body;
 
+  db.get("SELECT * FROM users WHERE username = ?", [username], async (err, row) => {
+    if (err) return res.status(500).send("Server error");
+    if (!row) return res.status(401).send("Invalid username or password");
+
+    const match = await bcrypt.compare(password, row.password_hash);
+    if (match) {
+      res.json({ message: "Login successful", username: row.username });
+    } else {
+      res.status(401).send("Invalid username or password");
+    }
+  });
+});
 ```
 
 結果；
