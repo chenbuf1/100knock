@@ -1142,8 +1142,13 @@ app.post("/login", (req, res) => {
 <img width="1150" height="320" alt="9fc1d2b8-071d-41e7-887f-d2d1f4e22114" src="https://github.com/user-attachments/assets/6a2b1b8e-e493-46ee-a4e6-884110c99329" />
 
 # 65 セッション管理
-npm install express-session
+`express-session` ミドルウェアを使い、ログイン後にセッション情報を保持し、ログイン済ユーザのみがアクセスできるエンドポイント `/mypage` を実装した。
+- 未ログイン状態で `/mypage` にアクセス → 401 Unauthorized
+- ログイン成功後に `/mypage` にアクセス → ユーザ情報を取得できる
 
+まず　npm install express-session
+
+コード
 const session = require("express-session");
 
 // セッション設定
@@ -1152,13 +1157,12 @@ app.use(session({
   secret: "your_secret_key", // 任意の文字列でOK（公開しない）
   resave: false,
   saveUninitialized: false,
-  cookie: { maxAge: 60000 } // セッションの有効期限（ミリ秒）
 }));
 ```
 
 <img width="1394" height="688" alt="e15c531b-2c12-4b9e-9dcb-3a7fdfa860c7" src="https://github.com/user-attachments/assets/35fcebe6-9264-4ac8-b5e5-03abd32132a7" />
 
-// ログイン済みユーザだけがアクセスできる
+// ログイン済みユーザだけがアクセスできるページ
 ```js
 app.get("/mypage", (req, res) => {
   if (!req.session.user) {
