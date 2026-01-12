@@ -1142,6 +1142,17 @@ app.post("/login", (req, res) => {
 <img width="1150" height="320" alt="9fc1d2b8-071d-41e7-887f-d2d1f4e22114" src="https://github.com/user-attachments/assets/6a2b1b8e-e493-46ee-a4e6-884110c99329" />
 
 # 65 セッション管理
+npm install express-session
+
+// セッション設定
+app.use(session({
+  secret: "your_secret_key", // 任意の文字列でOK（公開しない）
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 60000 } // セッションの有効期限（ミリ秒）
+}));
+
+
 # 66 クッキーを利用したセッション管理
 # 67 ログアウト処理
 
