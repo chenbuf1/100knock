@@ -1173,7 +1173,15 @@ app.get("/mypage", (req, res) => {
 ```
 
 結果：
+```
+課題65ではクッキーについて明示的な指示はありませんが、
+express-session はセッションIDをクッキーとしてクライアントに渡します。
+そのため、curlでログイン状態を検証するには、
+-c でクッキーを保存し、-b でクッキーを送信する方法が必要になります。
 
+-c cookie.txtとは、サーバーから送られたクッキーを cookie.txt に保存するオプションです。
+-b cookie.txtとは、保存されたクッキーを使ってリクエストを送るオプションです。
+```
 <img width="1134" height="342" alt="f9e1e282-1ab3-4a54-ab3d-14ba9c4065dc" src="https://github.com/user-attachments/assets/102914e3-7823-4234-8385-d5b96622661a" />
 
 
