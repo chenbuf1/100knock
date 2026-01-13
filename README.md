@@ -1187,6 +1187,7 @@ express-session はセッションIDをクッキーとしてクライアント�
 
 
 # 66 クッキーを利用したセッション管理
+クッキー設定部分のコード：
 ```js
    cookie: {  // クッキー設定 　66
       maxAge: 60000,         // 有効期限：例 1分
@@ -1195,6 +1196,9 @@ express-session はセッションIDをクッキーとしてクライアント�
     },
 ```
 結果：
+
+<img width="1140" height="476" alt="3009b862-4d23-475e-b8cd-646bb266a997" src="https://github.com/user-attachments/assets/83c0750e-ce03-4230-86b6-4d5122f03710" />
+
 
 # 67 ログアウト処理
 
