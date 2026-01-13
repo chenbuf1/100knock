@@ -11,6 +11,11 @@ app.use(session({
   secret: "your_secret_key", // 任意の文字列でOK（公開しない）
   resave: false,
   saveUninitialized: false,
+   cookie: {  // クッキー設定 　66
+      maxAge: 60000,         // 有効期限：例 1分
+      httpOnly: true,        // JavaScript からのアクセスを禁止（XSS 対策）
+      secure: false          // HTTPS のとき true（開発中なら false でもOK）
+    },
 }));
 
 const db = new sqlite3.Database("app.db");
