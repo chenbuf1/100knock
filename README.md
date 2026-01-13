@@ -1217,6 +1217,23 @@ app.post("/logout", (req, res) => {
 
 
 # 68 認証が必要なページ／API
+コード：
+```js
+function requireLogin(req, res, next) {
+  if (req.session && req.session.user) {
+    next(); // 登录状态，继续处理
+  } else {
+    res.status(401).json({ error: "Unauthorized: Please log in" });
+  }
+}
+
+app.get("/protected", requireLogin, (req, res) => {
+  res.json({ message: "This is a protected page", user: req.session.user });
+});
+```
+結果：
+
+<img width="1142" height="336" alt="010ccd7a-db6c-4fd8-aeb9-3379688811aa" src="https://github.com/user-attachments/assets/44fa7f24-5a1e-4968-9a2e-b76bb52c06fc" />
 
 
 # 69 CSRF・XSS対策
