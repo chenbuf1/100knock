@@ -63,6 +63,16 @@ app.get("/mypage", (req, res) => {
 });
 
 
+// 登出 API：销毁 session  67
+app.post("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) return res.status(500).send("Logout failed");
+    res.clearCookie("connect.sid"); // 清除浏览器端 Cookie
+    res.json({ message: "Logout successful" });
+  });
+});
+
+
 app.listen(3000, () => {
   console.log("✅ Server running at http://localhost:3000");
 });
