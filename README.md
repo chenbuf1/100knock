@@ -1187,6 +1187,15 @@ express-session はセッションIDをクッキーとしてクライアント�
 
 
 # 66 クッキーを利用したセッション管理
+```js
+   cookie: {  // クッキー設定 　66
+      maxAge: 60000,         // 有効期限：例 1分
+      httpOnly: true,        // JavaScript からのアクセスを禁止（XSS 対策）
+      secure: false          // HTTPS のとき true（開発中なら false でもOK）
+    },
+```
+結果：
+
 # 67 ログアウト処理
 
 # 68 認証が必要なページ／API
