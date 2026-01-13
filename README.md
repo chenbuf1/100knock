@@ -1201,6 +1201,17 @@ express-session はセッションIDをクッキーとしてクライアント�
 
 
 # 67 ログアウト処理
+コード：
+```js
+app.post("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) return res.status(500).send("Logout failed");
+    res.clearCookie("connect.sid"); // clear cookie
+    res.json({ message: "Logout successful" });
+  });
+});
+```
+結果：
 
 # 68 認証が必要なページ／API
 
