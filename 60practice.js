@@ -72,6 +72,20 @@ app.post("/logout", (req, res) => {
   });
 });
 
+// 中间件：检查是否登录 68
+function requireLogin(req, res, next) {
+  if (req.session && req.session.user) {
+    next(); // 登录状态，继续处理
+  } else {
+    res.status(401).json({ error: "Unauthorized: Please log in" });
+  }
+}
+
+// 示例认证 API（需要登录才能访问）68
+app.get("/protected", requireLogin, (req, res) => {
+  res.json({ message: "This is a protected page", user: req.session.user });
+});
+
 
 app.listen(3000, () => {
   console.log("✅ Server running at http://localhost:3000");
