@@ -1213,6 +1213,9 @@ app.post("/logout", (req, res) => {
 ```
 結果：
 
+<img width="1168" height="420" alt="85c0d0da-7736-4ae9-b433-d21608f65085" src="https://github.com/user-attachments/assets/682a8d38-56cf-4bba-b7b4-acb60a260210" />
+
+
 # 68 認証が必要なページ／API
 
 
