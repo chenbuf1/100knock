@@ -1352,11 +1352,46 @@ function Profile(props) {
 
 export default Profile;
 ```
-
+スクリーンショット
 <img width="664" height="394" alt="d4408c55-fe67-4f90-8160-2ae31adc146f" src="https://github.com/user-attachments/assets/b742ae86-8d1f-44ac-ab3e-077c17c2fc4d" />
 
 
 # 73 useStateによる状態管理
+Counter.js
+```js
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <h2>カウント: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>＋ 増やす</button>
+      <button onClick={() => setCount(count - 1)}>－ 減らす</button>
+    </div>
+  );
+}
+
+export default Counter;
+```
+
+App.js
+```js
+import Counter from './Counter';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>useState カウンター</h1>
+      <Counter />
+    </div>
+  );
+}
+```
+
+スクリーンショット
+<img width="726" height="390" alt="aaefe3f5-d166-4556-8356-0671662c6112" src="https://github.com/user-attachments/assets/60c54878-4f18-4c68-ae5a-0b0904ac52b7" />
 
 # 74 リストの動的描画
 
