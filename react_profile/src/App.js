@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <h1>自己紹介アプリ</h1>
-      <Profile name="Bufan" age={25} />
+      <Kid name="Bufan" age={25} />
     </div>
   );
 }
