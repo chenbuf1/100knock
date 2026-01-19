@@ -77,7 +77,7 @@ function App() {
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-
+/*77
 function App() {
   return (
     <div className="App">
@@ -87,6 +87,34 @@ function App() {
     </div>
   );
 }
+*/
+
+/*78
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <h1>React Routerの練習</h1>
+
+        <nav>
+          <Link to="/">Home</Link> | <Link to="/about">About</Link>
+        </nav>
+
+        <hr />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+*/
 
 
 export default App;
