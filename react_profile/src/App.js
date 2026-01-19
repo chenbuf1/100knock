@@ -5,6 +5,8 @@ import Kid from './Kid_72';
 import Counter from './Counter';
 import FruitList from './FruitList';
 import FormList from './FormList';
+import EffectExample from './EffectExample';
+
 
 
 /* 71
@@ -50,7 +52,7 @@ function App() {
   );
 }
 */
-
+/* 75
 function App() {
   return (
     <div className="App">
@@ -59,5 +61,16 @@ function App() {
     </div>
   );
 }
+*/
+function App() {
+  return (
+    <div className="App">
+      <h1>useEffectの練習</h1>
+      <EffectExample />
+    </div>
+  );
+}
+
+
 
 export default App;
