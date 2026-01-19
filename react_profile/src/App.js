@@ -89,7 +89,7 @@ function App() {
 }
 */
 
-/*78
+
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
@@ -114,7 +114,7 @@ function App() {
     </Router>
   );
 }
-*/
+
 
 
 export default App;
