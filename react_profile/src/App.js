@@ -4,6 +4,8 @@ import Profile from './Profile';
 import Kid from './Kid_72';
 import Counter from './Counter';
 import FruitList from './FruitList';
+import FormList from './FormList';
+
 
 /* 71
 function App() {
@@ -38,6 +40,7 @@ function App() {
 }
 */
 
+/* 74
 function App() {
   return (
     <div className="App">
@@ -46,6 +49,15 @@ function App() {
     </div>
   );
 }
+*/
 
+function App() {
+  return (
+    <div className="App">
+      <h1>useState + フォーム入力</h1>
+      <FormList />
+    </div>
+  );
+}
 
 export default App;
