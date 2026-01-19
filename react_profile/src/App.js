@@ -62,6 +62,8 @@ function App() {
   );
 }
 */
+
+/*76
 function App() {
   return (
     <div className="App">
@@ -70,7 +72,24 @@ function App() {
     </div>
   );
 }
+*/
 
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
+  );
+}
+
+
+export default App;
 
 
 export default App;
