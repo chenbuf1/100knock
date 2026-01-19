@@ -1280,9 +1280,21 @@ cd react_profile
 npm start
 ```
 スクリーンショット
-<img width="2190" height="1462" alt="ff7cc28b-3f05-470d-8ad0-709255ff573d" src="https://github.com/user-attachments/assets/65f65e5d-dcb1-4ae1-9d9c-b42ddd89cc1d" />
+<img width="500" height="500" alt="ff7cc28b-3f05-470d-8ad0-709255ff573d" src="https://github.com/user-attachments/assets/65f65e5d-dcb1-4ae1-9d9c-b42ddd89cc1d" />
 
 # 71 最初のコンポーネントの作成
+コード：
+src/Profile.js
+```js
+```
+
+src/App.js
+```js
+```
+
+スクリーンショット
+<img width="632" height="470" alt="650555d3-9187-4938-a627-23e4908ffad6" src="https://github.com/user-attachments/assets/a5bc73f9-3ee6-4dd5-936f-071c6c3a0047" />
+
 
 
 
