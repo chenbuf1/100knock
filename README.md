@@ -1324,6 +1324,30 @@ export default App;
 <img width="632" height="470" alt="650555d3-9187-4938-a627-23e4908ffad6" src="https://github.com/user-attachments/assets/a5bc73f9-3ee6-4dd5-936f-071c6c3a0047" />
 
 # 72 propsを用いたデータ受け渡し
+App.js
+```js
+import Header from './Header';
+
+function App() {
+  return (
+    <div>
+      <Header />
+      <Profile name="Cesc" age={24} />
+    </div>
+  );
+}
+```
+Kid
+```js
+function Header() {
+  return <h1>これはヘッダーです</h1>;
+}
+
+export default Header;
+```
+
+<img width="664" height="394" alt="d4408c55-fe67-4f90-8160-2ae31adc146f" src="https://github.com/user-attachments/assets/b742ae86-8d1f-44ac-ab3e-077c17c2fc4d" />
+
 
 # 73 useStateによる状態管理
 
