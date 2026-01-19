@@ -1416,6 +1416,9 @@ function FruitList() {
 
 export default FruitList;
 ```
+スクリーンショット
+<img width="556" height="566" alt="475f57cd-e426-4d5f-8b22-fe628a79e4ae" src="https://github.com/user-attachments/assets/5ba09bfa-75c6-485f-adb5-9220227160e2" />
+
 # 75 フォーム入力とイベント処理
 
 # 76 useEffectによる副作用処理
