@@ -1432,6 +1432,59 @@ function App() {
 <img width="556" height="566" alt="475f57cd-e426-4d5f-8b22-fe628a79e4ae" src="https://github.com/user-attachments/assets/5ba09bfa-75c6-485f-adb5-9220227160e2" />
 
 # 75 フォーム入力とイベント処理
+FormList.js
+```js
+import React, { useState } from 'react';
+
+function FormList() {
+  const [items, setItems] = useState([]);
+  const [inputText, setInputText] = useState("");
+
+  const handleAdd = () => {
+    if (inputText.trim() === "") return;  // 空白处理
+    setItems([...items, inputText]);
+    setInputText(""); // 输入框清空
+  };
+
+  return (
+    <div>
+      <h2>入力フォームとリスト</h2>
+      <input
+        type="text"
+        value={inputText}
+        onChange={(e) => setInputText(e.target.value)}
+        placeholder="入力してください"
+      />
+      <button onClick={handleAdd}>追加</button>
+
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default FormList;
+```
+
+App.js
+```js
+import FormList from './FormList';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>useState + フォーム入力</h1>
+      <FormList />
+    </div>
+  );
+}
+```
+スクリーンショット
+<img width="964" height="694" alt="678762bf-d2b8-47be-ae22-afcd0245f362" src="https://github.com/user-attachments/assets/5acf7050-afed-4fd7-91e0-cd2d09ede2b6" />
+
 
 # 76 useEffectによる副作用処理
 
