@@ -9,10 +9,10 @@ function FruitList() {
       <ul>
         {fruits.map((fruit, index) => (  //map() を使ってリストを動的に表示している
           <li key={index}>{fruit}</li>
-        ))}  //key 属性は index で設定
+        ))}  
       </ul>
     </div>
   );
-}
+}//key 属性は index で設定
 
 export default FruitList;
