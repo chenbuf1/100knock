@@ -1488,7 +1488,75 @@ function App() {
 
 # 76 useEffectによる副作用処理
 
+
+
 # 77 複数コンポーネントの分割・再利用
+Header.js
+```js
+import React from 'react';
+
+function Header() {
+  return (
+    <header style={{ backgroundColor: '#f0f0f0', padding: '10px' }}>
+      <h1>My React サイト</h1>
+    </header>
+  );
+}
+
+export default Header;
+
+```
+
+Main.js
+```js
+import React from 'react';
+
+function Main() {
+  return (
+    <main style={{ padding: '20px' }}>
+      <p>これはメインコンテンツです。Reactコンポーネントを使って画面を構成しています。</p>
+    </main>
+  );
+}
+
+export default Main;
+```
+Footer.js
+```js
+import React from 'react';
+
+function Footer() {
+  return (
+    <footer style={{ backgroundColor: '#ddd', padding: '10px', marginTop: '20px' }}>
+      <p>&copy; 2026 Cesc Works</p>
+    </footer>
+  );
+}
+
+export default Footer;
+```
+App.js
+```js
+import React from 'react';
+import './App.css';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+```
+スクリーンショット
+<img width="1564" height="686" alt="620fe138-9ef9-4445-993c-dfe59e27956c" src="https://github.com/user-attachments/assets/3cdfc2d9-0520-45d4-84dc-70f0f1fb716c" />
 
 # 78 react-router-domを利用したルーティング
 
