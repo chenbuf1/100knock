@@ -1286,6 +1286,20 @@ npm start
 コード：
 src/Profile.js
 ```js
+import React from 'react';
+
+function Profile() {
+  return (
+    <div>
+      <h2>私のプロフィール</h2>
+      <p>名前：陳 卜凡</p>
+      <p>出身：中国</p>
+      <p>趣味：コーヒー・音楽</p>
+    </div>
+  );
+}
+
+export default Profile;
 ```
 
 src/App.js
@@ -1308,6 +1322,26 @@ export default App;
 
 スクリーンショット
 <img width="632" height="470" alt="650555d3-9187-4938-a627-23e4908ffad6" src="https://github.com/user-attachments/assets/a5bc73f9-3ee6-4dd5-936f-071c6c3a0047" />
+
+# 72 propsを用いたデータ受け渡し
+
+# 73 useStateによる状態管理
+
+# 74 リストの動的描画
+
+# 75 フォーム入力とイベント処理
+
+# 76 useEffectによる副作用処理
+
+# 77 複数コンポーネントの分割・再利用
+
+# 78 react-router-domを利用したルーティング
+
+# 79 Reactアプリの公開
+
+
+
+
 
 
 
