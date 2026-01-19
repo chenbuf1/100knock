@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Profile from './Profile';
-import Kid from './kid_72';
+import Kid from './Kid_72';
 
 /* 71
 function App() {
