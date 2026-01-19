@@ -1273,4 +1273,17 @@ JavaScript から Cookie を読み取れないようにする
 
 
 
+# 70 Reactプロジェクトの作成
+```
+npx create-react-app my-react-app
+cd react_profile
+npm start
+```
+スクリーンショット
+<img width="2190" height="1462" alt="ff7cc28b-3f05-470d-8ad0-709255ff573d" src="https://github.com/user-attachments/assets/65f65e5d-dcb1-4ae1-9d9c-b42ddd89cc1d" />
+
+# 71 最初のコンポーネントの作成
+
+
+
 
