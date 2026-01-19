@@ -1339,11 +1339,18 @@ function App() {
 ```
 Kid
 ```js
-function Header() {
-  return <h1>これはヘッダーです</h1>;
+import React from 'react';
+
+function Profile(props) {
+  return (
+    <div>
+      <h2>こんにちは、{props.name}さん！</h2>
+      <p>年齢: {props.age}歳</p>
+    </div>
+  );
 }
 
-export default Header;
+export default Profile;
 ```
 
 <img width="664" height="394" alt="d4408c55-fe67-4f90-8160-2ae31adc146f" src="https://github.com/user-attachments/assets/b742ae86-8d1f-44ac-ab3e-077c17c2fc4d" />
