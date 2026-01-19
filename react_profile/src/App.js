@@ -15,6 +15,7 @@ function App() {
 }
 */
 
+/* 72
 function App() {
   return (
     <div className="App">
@@ -23,7 +24,7 @@ function App() {
     </div>
   );
 }
-
+*/
 function App() {
   return (
     <div className="App">
