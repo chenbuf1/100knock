@@ -1418,6 +1418,8 @@ export default FruitList;
 ```
 App.js
 ```js
+import FruitList from './FruitList';
+
 function App() {
   return (
     <div className="App">
@@ -1426,6 +1428,7 @@ function App() {
     </div>
   );
 }
+export default App;
 ```
 
 スクリーンショット
