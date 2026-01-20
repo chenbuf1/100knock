@@ -1395,7 +1395,7 @@ function App() {
 
 # 74 リストの動的描画
 
-Counter.js
+FruitList.js
 ```js
 import React from 'react';
 
