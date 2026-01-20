@@ -1487,8 +1487,17 @@ function App() {
 
 
 # 76 useEffectによる副作用処理
-
-
+App.js
+```js
+function App() {
+  return (
+    <div className="App">
+      <h1>useEffectの練習</h1>
+      <EffectExample />
+    </div>
+  );
+}
+```
 
 # 77 複数コンポーネントの分割・再利用
 Header.js
@@ -1559,10 +1568,44 @@ export default App;
 <img width="1564" height="686" alt="620fe138-9ef9-4445-993c-dfe59e27956c" src="https://github.com/user-attachments/assets/3cdfc2d9-0520-45d4-84dc-70f0f1fb716c" />
 
 # 78 react-router-domを利用したルーティング
+App.js
+```js
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <h1>React Routerの練習</h1>
+
+        <nav>
+          <Link to="/">Home</Link> | <Link to="/about">About</Link>
+        </nav>
+
+        <hr />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+```
 
 # 79 Reactアプリの公開
+npm install gh-pages --save-dev
 
+package.json
+"homepage": "https://chenbuf1.github.io/react_profile",
+"scripts"
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
 
+npm run deploy
 
 
 
