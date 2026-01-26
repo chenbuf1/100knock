@@ -8,6 +8,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 .then((response) => response.json())
 .then((data) => {
 // console.log(data); // 80 
+setTimeout(() => {
 // 完了後：Loading を消す
 status.textContent = "";
 
@@ -16,6 +17,7 @@ const li = document.createElement("li");
 li.textContent = post.title;
 ul.appendChild(li);
 });
+}, 2000); // 2000ms = 2秒
 });
 
 
