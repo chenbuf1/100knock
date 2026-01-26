@@ -1649,6 +1649,8 @@ open website  http://localhost:3000/80.html
 
 # 81 非同期通信（Promise）の基本
 
+コンソール出力のスクリーンショット
+<img width="1264" height="300" alt="e494390a-63d1-4440-9677-5ba0962262d0" src="https://github.com/user-attachments/assets/28e2e355-2384-4745-8757-2fd3225f8ad1" />
 
 # 82 APIデータの表示せよ（バニラJS）
 
