@@ -1795,6 +1795,13 @@ status.textContent = "データの取得に失敗しました";
 
 
 # 85 POSTメソッドでのAPIデータ送信
+fetch.js
+```js
+
+```
+
+スクリーンショット
+<img width="1140" height="156" alt="031dc6e4-14d8-4f6f-ae86-e9c6b1be414f" src="https://github.com/user-attachments/assets/78be5035-f122-48c9-88ac-58462fa5e2e8" />
 
 # 86 ReactでのAPIからのデータ取得
 
