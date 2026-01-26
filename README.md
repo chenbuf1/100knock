@@ -1703,19 +1703,38 @@ open website: http://localhost:3000/82.html
 
 
 # 83 API取得中・完了後の状態表示
+83loading.html
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Posts</h1>
+
+<p id="status"></p>
+<ul id="postList"></ul>  // status　と postList　のDOMノードを2つ作成した
+
+<script src="fetch.js"></script> 　// fetch.js を実行する
+</body>
+</html>
+```
+
 fetch.js
 ```js
 const status = document.getElementById("status");
 const ul = document.getElementById("postList");
-
-// 取得中
-status.textContent = "Loading...";
+//以前に HTMLのDOM ノードを取得して、保持しておく。
+```
+1、ロード中状態を設定：リクエスト前に「Loading...」を表示
+２、データ取得処理
+３、取得成功後：2秒後にstatusをクリア
+setTimeoutは、ロードの表示が確認できるように 2 秒を設定する
+```js
+status.textContent = "Loading...";// 取得中
 fetch("https://jsonplaceholder.typicode.com/posts")
 .then((response) => response.json())
 .then((data) => {
 setTimeout(() => {
-// 完了後：Loading を消す
-status.textContent = "";
+status.textContent = ""; // 完了後：Loading を消す
 
 data.forEach((post) => {
 const li = document.createElement("li");
@@ -1726,22 +1745,7 @@ ul.appendChild(li);
 });
 ```
 
-83loading.html
-```html
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Posts</h1>
 
-
-<p id="status"></p>
-<ul id="postList"></ul>
-
-
-<script src="fetch.js"></script>
-</body>
-</html>
-```
 ```
 npx serve .
 http://localhost:3000/83loading.html
