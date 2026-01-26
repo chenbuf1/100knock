@@ -1703,6 +1703,55 @@ open website: http://localhost:3000/82.html
 
 
 # 83 API取得中・完了後の状態表示
+fetch.js
+```js
+const status = document.getElementById("status");
+const ul = document.getElementById("postList");
+
+// 取得中
+status.textContent = "Loading...";
+fetch("https://jsonplaceholder.typicode.com/posts")
+.then((response) => response.json())
+.then((data) => {
+setTimeout(() => {
+// 完了後：Loading を消す
+status.textContent = "";
+
+data.forEach((post) => {
+const li = document.createElement("li");
+li.textContent = post.title;
+ul.appendChild(li);
+});
+}, 2000); // 2000ms = 2秒
+});
+```
+
+83loading.html
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Posts</h1>
+
+
+<p id="status"></p>
+<ul id="postList"></ul>
+
+
+<script src="fetch.js"></script>
+</body>
+</html>
+```
+```
+npx serve .
+http://localhost:3000/83loading.html
+```
+スクリーンショット
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/de3ac9da-31fb-46af-89a3-7048fc04e4db" />
+
+2秒後
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/a87882e2-eebc-4b83-9453-b4b0a4f17ec0" />
+
 
 # 84 エラー処理
 
