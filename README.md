@@ -1628,22 +1628,10 @@ fetch("https://jsonplaceholder.typicode.com/posts")
     console.log(data);
   });
 ```
-
-80.html
-```html
-<!DOCTYPE html>
-<html>
-  <body>
-    <script src="fetch.js"></script>
-  </body>
-</html>
-```
-npx serve .
-
-open website  http://localhost:3000/80.html
+node fetch.js
 
 コンソール出力のスクリーンショット
-<img width="1212" height="1296" alt="6ed8adb7-35d1-41ee-af4d-a0c21417e04d" src="https://github.com/user-attachments/assets/6065e1b9-f84f-4588-b79f-bbf8c87a3d11" />
+<img width="744" height="772" alt="e10b0b39-680f-41aa-ad4b-5b9b84340dfc" src="https://github.com/user-attachments/assets/93b8c612-83b8-44f9-bb61-12d0d2470777" />
 
 
 
@@ -1652,33 +1640,25 @@ promise.js
 ```js
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("成功しました");
+    const random = Math.random() ; // 成功 or 失敗
+
+    if (random > 0.5) {
+      resolve("成功しました! random number:" + random);
+    } else {
+      reject("失敗しました... random number:" + random);
+    }
   }, 1000);
 });
 
 promise
   .then((result) => {
-    console.log(result);
+    console.log("then:", result);
   })
   .catch((error) => {
-    console.log(error);
+    console.log("catch:", error);
   });
 ```
-
-81.html
-```html
-<!DOCTYPE html>
-<html>
-  <body>
-     <!--  81 promise -->
-    <script src="promise.js"></script>
-
-  </body>
-</html>
-```
-npx serve .
-
-open website  http://localhost:3000/81.html
+node promise.js
 
 コンソール出力のスクリーンショット
 
