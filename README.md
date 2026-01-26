@@ -1761,7 +1761,34 @@ http://localhost:3000/83loading.html
 
 fetch.js
 ```js
+// 82
+const status = document.getElementById("status");
+const ul = document.getElementById("postList");
+// 取得中
+status.textContent = "Loading...";
 
+// make mistake on URL
+fetch("https://jsonplaceholder.typicode.com/POSTS_WRONG")
+.then((response) => {
+if (!response.ok) {
+throw new Error("API error");
+}
+return response.json();
+})
+.then((data) => {
+// 成功
+status.textContent = "";
+data.forEach((post) => {
+const li = document.createElement("li");
+li.textContent = post.title;
+ul.appendChild(li);
+});
+})
+
+.catch((error) => {
+// 👇 84
+status.textContent = "データの取得に失敗しました";
+});
 ```
 スクリーンショット
 <img width="802" height="486" alt="d9ae682e-ef2d-49a5-b4b5-b2951fdc1a02" src="https://github.com/user-attachments/assets/591ecd9f-167b-4862-af63-d19a2d028a87" />
