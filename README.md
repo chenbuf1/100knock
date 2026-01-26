@@ -1819,6 +1819,23 @@ console.log("サーバーから返却されたデータ:", data);
 <img width="1140" height="156" alt="031dc6e4-14d8-4f6f-ae86-e9c6b1be414f" src="https://github.com/user-attachments/assets/78be5035-f122-48c9-88ac-58462fa5e2e8" />
 
 # 86 ReactでのAPIからのデータ取得
+Ports.js
+```js
+
+```
+
+App.js
+```js
+
+```
+
+```
+cd react_profile
+npm start
+```
+
+スクリーンショット
+<img width="1220" height="450" alt="d57bfe11-18ff-43d2-aa51-9784e0302f39" src="https://github.com/user-attachments/assets/075013d0-5246-4ca2-8244-5c3f7ded7b00" />
 
 # 87 フォーム入力→API送信→結果表示
 
