@@ -1616,3 +1616,38 @@ npm run deploy
 
 
 
+
+
+# 80 fetchを用いたAPIからのデータ取得
+
+fetch.js
+```js
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+  });
+```
+
+80.html
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <script src="fetch.js"></script>
+  </body>
+</html>
+```
+npx serve .
+
+open website  http://localhost:3000/80.html
+
+コンソール出力のスクリーンショット
+<img width="1212" height="1296" alt="6ed8adb7-35d1-41ee-af4d-a0c21417e04d" src="https://github.com/user-attachments/assets/6065e1b9-f84f-4588-b79f-bbf8c87a3d11" />
+
+
+
+
+
+
+
