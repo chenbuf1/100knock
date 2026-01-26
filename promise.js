@@ -1,14 +1,20 @@
-//81 promise
+// 81 promise
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve("成功しました");
+    const success = Math.random() > 0.5; // 成功 or 失败（随机）
+
+    if (success) {
+      resolve("成功しました");
+    } else {
+      reject("失敗しました");
+    }
   }, 1000);
 });
 
 promise
   .then((result) => {
-    console.log(result);
+    console.log("then:", result);
   })
   .catch((error) => {
-    console.log(error);
+    console.log("catch:", error);
   });
