@@ -1,3 +1,4 @@
+/* 71
 import React from 'react';
 import './App.css';
 import Profile from './Profile';
@@ -9,7 +10,7 @@ import EffectExample from './EffectExample';
 
 
 
-/* 71
+
 function App() {
   return (
     <div className="App">
@@ -74,10 +75,11 @@ function App() {
 }
 */
 
+/*77
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-/*77
+
 function App() {
   return (
     <div className="App">
@@ -89,7 +91,7 @@ function App() {
 }
 */
 
-
+/* 78
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
@@ -115,7 +117,23 @@ function App() {
   );
 }
 
+*/
+
+// 86 App.js
+import Posts from "./Posts";
+
+
+function App() {
+return (
+<div>
+<h1>Posts</h1>
+<Posts />
+</div>
+);
+}
 
 
 export default App;
+
+
 
