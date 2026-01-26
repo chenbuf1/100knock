@@ -1696,6 +1696,10 @@ ul.appendChild(li);
 </body>
 </html>
 ```
+npx serve .
+open website: http://localhost:3000/82.html
+コンソール出力のスクリーンショット
+<img width="520" height="564" alt="7b64788e-28d5-4dac-b650-f07c5c383a5a" src="https://github.com/user-attachments/assets/53f6dcc9-fe83-4005-b99a-24e6d292f10a" />
 
 
 # 83 API取得中・完了後の状態表示
