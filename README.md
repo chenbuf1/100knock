@@ -1821,12 +1821,52 @@ console.log("サーバーから返却されたデータ:", data);
 # 86 ReactでのAPIからのデータ取得
 Ports.js
 ```js
+import { useEffect, useState } from "react";  //定義
 
+
+function Posts() {
+const [posts, setPosts] = useState([]);
+/* React で useState として posts を作成する。
+setPosts は更新するための関数で、
+postsは先週の count と同じ役割を持ち、setPostsを増減させるために使う。
+*/
+
+useEffect(() => { //　ページが表示された後に行う処理
+fetch("https://jsonplaceholder.typicode.com/posts")
+.then((res) => res.json())  //サーバーから返ってきたデータはそのままでは使用できないため、まず JavaScript で扱えるデータに変換する。
+.then((data) => {
+setPosts(data);  // データが取得できたため、保存しておく。
+});
+}, []);  // [] を指定して、React に fetch を1回だけ実行させる。
+
+
+return (  // returnは　ページの最終表示内容
+<ul>
+{posts.map((post) => (  // 先週と同じで、map を使ってデータを HTML に変換する。
+<li key={post.id}>{post.title}</li>
+))}
+</ul>
+);
+}
+
+
+export default Posts;
 ```
 
 App.js
 ```js
+import Posts from "./Posts";
 
+function App() {
+return (
+<div>
+<h1>Posts</h1>
+<Posts />
+</div>
+);
+}
+
+export default App;
 ```
 
 ```
