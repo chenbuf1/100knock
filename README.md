@@ -1724,10 +1724,10 @@ const status = document.getElementById("status");
 const ul = document.getElementById("postList");
 //以前に HTMLのDOM ノードを取得して、保持しておく。
 ```
-1、ロード中状態を設定：リクエスト前に「Loading...」を表示
-２、データ取得処理
-３、取得成功後：2秒後にstatusをクリア
-setTimeoutは、ロードの表示が確認できるように 2 秒を設定する
+- 1、ロード中状態を設定：リクエスト前に「Loading...」を表示
+- ２、データ取得処理
+- ３、取得成功後：2秒後にstatusをクリア
+- setTimeoutは、ロードの表示が確認できるように 2 秒を設定する
 ```js
 status.textContent = "Loading...";// 取得中
 fetch("https://jsonplaceholder.typicode.com/posts")
