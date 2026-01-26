@@ -1681,8 +1681,8 @@ npx serve .
 open website  http://localhost:3000/81.html
 
 コンソール出力のスクリーンショット
-<img width="1264" height="300" alt="e494390a-63d1-4440-9677-5ba0962262d0" src="https://github.com/user-attachments/assets/28e2e355-2384-4745-8757-2fd3225f8ad1" />
 
+<img width="908" height="154" alt="332c1fbf-d705-442b-a781-1446593c092d" src="https://github.com/user-attachments/assets/5a6634be-7489-41ba-98e4-4eb8f867e3c0" />
 
 
 # 82 APIデータの表示せよ（バニラJS）
