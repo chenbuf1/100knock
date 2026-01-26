@@ -1,7 +1,8 @@
+/* 
 // 82
 const status = document.getElementById("status");
 const ul = document.getElementById("postList");
-
+*/
 /* 83
 // 取得中
 status.textContent = "Loading...";
@@ -22,7 +23,7 @@ ul.appendChild(li);
 });
 */
 
-
+/* 84
 // 取得中
 status.textContent = "Loading...";
 
@@ -48,8 +49,25 @@ ul.appendChild(li);
 // 👇 84
 status.textContent = "データの取得に失敗しました";
 });
+*/
 
 
+
+fetch("https://jsonplaceholder.typicode.com/posts", {
+method: "POST", //我是来“送数据”的
+headers: {
+"Content-Type": "application/json" //我送的是 JSON
+},
+body: JSON.stringify({   //真正送给服务器的内容。JS 对象 → 转成 JSON → 发出去
+title: "test title",
+body: "test body",
+userId: 1  
+})
+})
+.then((response) => response.json())
+.then((data) => {  //把服务器回你的东西  打印出来让你确认
+console.log("サーバーから返却されたデータ:", data);
+});
 
 
 
