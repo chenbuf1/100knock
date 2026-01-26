@@ -1,12 +1,12 @@
 // 81 promise
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    const success = Math.random() > 0.5; // 成功 or 失败（随机）
+    const random = Math.random() ; // 成功 or 失败（随机）
 
-    if (success) {
-      resolve("成功しました");
+    if (random > 0.5) {
+      resolve("成功しました! random number:" + random);
     } else {
-      reject("失敗しました");
+      reject("失敗しました... random number:" + random);
     }
   }, 1000);
 });
