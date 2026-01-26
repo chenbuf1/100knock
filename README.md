@@ -1759,6 +1759,14 @@ http://localhost:3000/83loading.html
 
 # 84 エラー処理
 
+fetch.js
+```js
+
+```
+スクリーンショット
+<img width="802" height="486" alt="d9ae682e-ef2d-49a5-b4b5-b2951fdc1a02" src="https://github.com/user-attachments/assets/591ecd9f-167b-4862-af63-d19a2d028a87" />
+
+
 # 85 POSTメソッドでのAPIデータ送信
 
 # 86 ReactでのAPIからのデータ取得
