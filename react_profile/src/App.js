@@ -118,7 +118,7 @@ function App() {
 }
 
 */
-
+/*
 // 86 App.js
 import Posts from "./Posts";
 
@@ -134,6 +134,22 @@ return (
 
 
 export default App;
+*/
 
+// 87
+import PostForm from "./PostForm";
+
+
+function App() {
+return (
+<div>
+<h1>87 Form POST</h1>
+<PostForm />
+</div>
+);
+}
+
+
+export default App;
 
 
