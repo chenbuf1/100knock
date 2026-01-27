@@ -136,7 +136,7 @@ return (
 export default App;
 */
 
-// 87
+/* 87
 import PostForm from "./PostForm";
 
 
@@ -145,6 +145,22 @@ return (
 <div>
 <h1>87 Form POST</h1>
 <PostForm />
+</div>
+);
+}
+
+
+export default App;
+*/
+
+// 88
+import PostsPagination from "./PostsPagination";
+
+function App() {
+return (
+<div>
+<h1>88 Pagination</h1>
+<PostsPagination />
 </div>
 );
 }
