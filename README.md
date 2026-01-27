@@ -1828,7 +1828,7 @@ function Posts() {
 const [posts, setPosts] = useState([]);
 /* React で useState として posts を作成する。
 setPosts は更新するための関数で、
-postsは先週の count と同じ役割を持ち、setPostsを増減させるために使う。
+posts は先週の count と近い役割を持ち、setPosts はデータを更新するために使う。
 */
 
 useEffect(() => { //　ページが表示された後に行う処理
