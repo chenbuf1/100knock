@@ -1951,9 +1951,77 @@ export default App;
 <img width="1142" height="638" alt="9e72b8e8-adb6-45d7-994b-f158edee90e4" src="https://github.com/user-attachments/assets/79e7409b-f9bf-402c-9465-d6e21d3198a7" />
 
 # 88 APIデータのページネーション表示
+PostsPagination.js
+```js
+import { useEffect, useState } from "react";
+
+function PostsPagination() {
+  const [posts, setPosts] = useState([]);
+  const [page, setPage] = useState(1);
+
+  const limit = 10; // 每页显示 10 条
+
+  useEffect(() => {
+    fetch(
+      `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${limit}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setPosts(data);
+      });
+  }, [page]);
+
+  return (
+    <div>
+      <h2>Page {page}</h2>
+
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>{post.title}</li>
+        ))}
+      </ul>
+
+      <button onClick={() => setPage(page - 1)} disabled={page === 1}>
+        前へ
+      </button>
+
+      <button onClick={() => setPage(page + 1)}>
+        次へ
+      </button>
+    </div>
+  );
+}
+
+export default PostsPagination;
+```
+
+App.js
+```js
+import PostsPagination from "./PostsPagination";
+
+function App() {
+  return (
+    <div>
+      <h1>88 Pagination</h1>
+      <PostsPagination />
+    </div>
+  );
+}
+
+export default App;
+```
+スクリーンショット
+<img width="1248" height="716" alt="image" src="https://github.com/user-attachments/assets/9f42190d-d2f9-4d54-864b-0eaacae4e5f0" />
+<img width="1080" height="738" alt="image" src="https://github.com/user-attachments/assets/8a4ccaf0-686d-4909-9379-52185632984e" />
+
 
 # 89 CORS（クロスオリジン）の調査
 
-
-
+CORS（Cross-Origin Resource Sharing）
+```
+CORS とは、ブラウザが異なるオリジン（ドメイン・ポート・プロトコル）間の通信を制限する仕組みである。  
+これは、悪意のあるサイトがユーザの権限で他サイトの情報を不正取得することを防ぐため、ブラウザ側で実装されたセキュリティ対策である。  
+異なるオリジンへ API リクエストを送信すると、サーバが適切な CORS ヘッダ（Access-Control-Allow-Origin など）を返さない場合、通信はブロックされる。  
+対策としては、サーバ側で CORS を許可する設定を行う、同一オリジンからアクセスする、または開発時にプロキシを利用する方法がある。
+```
 
