@@ -1878,6 +1878,77 @@ npm start
 <img width="1220" height="450" alt="d57bfe11-18ff-43d2-aa51-9784e0302f39" src="https://github.com/user-attachments/assets/075013d0-5246-4ca2-8244-5c3f7ded7b00" />
 
 # 87 フォーム入力→API送信→結果表示
+PortForm.js
+```js
+import { useState } from "react";
+
+function PostForm() {
+  const [title, setTitle] = useState("");
+  const [result, setResult] = useState(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        title: title,
+        body: "test body",
+        userId: 1,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setResult(data);
+      });
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="title"
+        />
+        <button type="submit">送信</button>
+      </form>
+
+      {result && (
+        <div>
+          <p>送信結果</p>
+          <p>title: {result.title}</p>
+          <p>id: {result.id}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default PostForm;
+```
+
+App.js
+```js
+import PostForm from "./PostForm";
+
+
+function App() {
+return (
+<div>
+<h1>87 Form POST</h1>
+<PostForm />
+</div>
+);
+}
+
+
+export default App;
+```
+スクリーンショット
+<img width="1142" height="638" alt="9e72b8e8-adb6-45d7-994b-f158edee90e4" src="https://github.com/user-attachments/assets/79e7409b-f9bf-402c-9465-d6e21d3198a7" />
 
 # 88 APIデータのページネーション表示
 
