@@ -2039,6 +2039,16 @@ https://render.com
 
 
 # 92. サンプルNode.jsアプリをRenderで公開
+90index.js
+
+package.json
+```json
+
+```
+
+https://one00knock-2owd.onrender.com
+<img width="850" height="202" alt="2945ade5-2a16-49cf-ab69-40d3c357c32a" src="https://github.com/user-attachments/assets/844f834e-4b1b-47de-b204-8c2e67e0eda1" />
+
 
 # 93. Webアプリの自動デプロイ（CI/CD）を設定せよ
 # 94. 環境変数（Environment Variables）を設定せよ
