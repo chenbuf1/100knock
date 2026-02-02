@@ -1,4 +1,12 @@
-"scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "node 90index.js"
+{
+  "name": "git_100knock",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node 90index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
