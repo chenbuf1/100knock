@@ -2144,9 +2144,7 @@ git clone https://github.com/chenbuf1/other-s-work
 
 5. レビュー後，Pull Request をマージ(other user)
 ```
-# 98. デプロイ時のエラーの解決
 
-# 99. チーム開発のふりかえりと成果
 
 
 
