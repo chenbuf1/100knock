@@ -2034,6 +2034,9 @@ GitHubと連携すれば自動デプロイも可能。
 ```
 
 # 91. Renderアカウント作成
+https://render.com
+<img width="1072" height="1020" alt="43a3bb5f-9eff-4a37-956e-9a8bd7c67f33" src="https://github.com/user-attachments/assets/151fa2d8-f382-40b7-aae9-95ce22170833" />
+
 
 # 92. サンプルNode.jsアプリをRenderで公開
 
