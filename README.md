@@ -2102,6 +2102,25 @@ app.get("/env", (req, res) => {
 
 # 95. ルート以外のエンドポイントの公開
 
+index.js
+```js
+// /api/hello
+app.get("/api/hello", (req, res) => {
+  res.json({
+    message: "Hello from /api/hello",
+  });
+});
+
+// /about
+app.get("/about", (req, res) => {
+  res.send("This is the about page");
+});
+```
+
+<img width="942" height="334" alt="69d97009-52fb-45ed-8ce0-1e629ed71218" src="https://github.com/user-attachments/assets/9c93ee3e-4e3b-4712-98bd-bc7a2f902660" />
+
+<img width="966" height="262" alt="2bf213fa-bd49-462f-be4f-b412253265e2" src="https://github.com/user-attachments/assets/3d477ed9-3810-4861-a1b3-258efef9ca78" />
+
 
 # 96. チーム開発用にリポジトリをfork・clone
 # 97. Pull Requestを利用した開発
