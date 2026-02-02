@@ -2124,6 +2124,8 @@ app.get("/about", (req, res) => {
 
 # 96. チーム開発用にリポジトリをfork・clone
 fork
+<img width="968" height="166" alt="f96b81f0-2113-4bce-912a-354eed9be4b7" src="https://github.com/user-attachments/assets/94afaca3-709a-4cca-8cd8-7eb66eb802d6" />
+
 
 git clone https://github.com/chenbuf1/other-s-work
 
@@ -2131,7 +2133,19 @@ git clone https://github.com/chenbuf1/other-s-work
 
 
 # 97. Pull Requestを利用した開発
+```
+1. fork したリポジトリのファイルを修正
+
+2. 例　README.md を編集（Change by Bufan の追加）
+
+3. GitHub 上で Pull Request を作成
+
+4. Pull Request のレビューを実施
+
+5. レビュー後，Pull Request をマージ(other user)
+```
 # 98. デプロイ時のエラーの解決
+
 # 99. チーム開発のふりかえりと成果
 
 
