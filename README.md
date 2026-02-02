@@ -2123,6 +2123,9 @@ app.get("/about", (req, res) => {
 
 
 # 96. チーム開発用にリポジトリをfork・clone
+
+git clone https://github.com/chenbuf1/other-s-work
+
 # 97. Pull Requestを利用した開発
 # 98. デプロイ時のエラーの解決
 # 99. チーム開発のふりかえりと成果
