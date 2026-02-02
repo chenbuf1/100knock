@@ -5,6 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node 90index.js"
+}
   },
   "repository": {
     "type": "git",
@@ -21,4 +23,5 @@
   "dependencies": {
     "express": "^5.2.1"
   }
+  
 }
