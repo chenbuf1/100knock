@@ -2077,6 +2077,15 @@ https://one00knock-2owd.onrender.com
 
 # 93. Webアプリの自動デプロイ（CI/CD）を設定せよ
 
+<img width="1730" height="564" alt="6a27dbf6-20f8-4091-9b38-336e597ff29d" src="https://github.com/user-attachments/assets/c197204a-6437-4277-8c00-5473f533a486" />
+<img width="1722" height="330" alt="7634bc79-77c3-4750-a1e2-9700fe5bde19" src="https://github.com/user-attachments/assets/7f83387b-af0a-4cd2-a216-5963532dc5b9" />
+
+from
+res.send("Hello, Render!");
+to
+res.send("Hello, Render! Auto Deploy OK ");
+
+
 
 # 94. 環境変数（Environment Variables）を設定せよ
 # 95. ルート以外のエンドポイントの公開
