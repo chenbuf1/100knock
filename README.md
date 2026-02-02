@@ -2040,10 +2040,35 @@ https://render.com
 
 # 92. サンプルNode.jsアプリをRenderで公開
 90index.js
+```json
+const express = require("express");
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send("Hello, Render!");
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+```
 
 package.json
 ```json
-
+{
+  "name": "git_100knock",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node 90index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
 ```
 
 https://one00knock-2owd.onrender.com
@@ -2051,6 +2076,8 @@ https://one00knock-2owd.onrender.com
 
 
 # 93. Webアプリの自動デプロイ（CI/CD）を設定せよ
+
+
 # 94. 環境変数（Environment Variables）を設定せよ
 # 95. ルート以外のエンドポイントの公開
 # 96. チーム開発用にリポジトリをfork・clone
