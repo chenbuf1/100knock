@@ -2085,9 +2085,12 @@ res.send("Hello, Render!");
 to
 res.send("Hello, Render! Auto Deploy OK ");
 
+<img width="802" height="216" alt="6d52a160-303f-4dbd-a384-7dd52a29fdff" src="https://github.com/user-attachments/assets/5b9801a9-0ff4-471b-819f-91931a96569e" />
 
 
 # 94. 環境変数（Environment Variables）を設定せよ
+
+
 # 95. ルート以外のエンドポイントの公開
 # 96. チーム開発用にリポジトリをfork・clone
 # 97. Pull Requestを利用した開発
