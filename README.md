@@ -2089,6 +2089,15 @@ res.send("Hello, Render! Auto Deploy OK ");
 
 
 # 94. 環境変数（Environment Variables）を設定せよ
+<img width="2150" height="488" alt="7d43ced3-aea8-42b5-ad2a-88523586902b" src="https://github.com/user-attachments/assets/f0dae025-936d-489e-8227-fc299ac64e9c" />
+90index.js
+```js
+app.get("/env", (req, res) => {
+  res.send(`MY_MESSAGE = ${process.env.MY_MESSAGE}`);
+});
+```
+
+
 
 
 # 95. ルート以外のエンドポイントの公開
