@@ -2097,10 +2097,12 @@ app.get("/env", (req, res) => {
 });
 ```
 
-
+<img width="842" height="216" alt="5d027e79-c287-4335-b60a-2b92f44a8eb4" src="https://github.com/user-attachments/assets/ab66879e-3dfd-4f0d-8fe7-51d8e68d1d70" />
 
 
 # 95. ルート以外のエンドポイントの公開
+
+
 # 96. チーム開発用にリポジトリをfork・clone
 # 97. Pull Requestを利用した開発
 # 98. デプロイ時のエラーの解決
